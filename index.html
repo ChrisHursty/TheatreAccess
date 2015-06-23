@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,700italic,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <title>Theatre Access - New York City</title>
+</head>
+<body>
+    <header class="topBar">
+      	<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">How It Works</a></li>
+								<li><a href="#">About</a></li>
+							</ul>
+						</div><!--/.nav-collapse -->
+						<div class="branding">
+							<a class="navbar-brand" href="#">
+								<h1><img src="img/logoLg.jpg" alt=""></h1>
+							</a>	
+						</div>
+
+						<div class="headerRight">
+							<p>An ADA Accessible Broadway Performance Site</p>
+						</div>
+					</div><!--/.container-fluid -->
+				</nav>
+			</div>
+      	</div>    
+    </header>
+	<div class="whiteBar">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 filterHeader">
+					Filter By Accessability
+				</div>
+				<div class="col-sm-6 filterHeaderRight">
+					Filter By Performance Date
+				</div>	
+			</div>
+		</div>	
+	</div>
+	
+  	<div class="hero">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-sm-6">
+					<div class="row filterBtn">
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons wheelchair">Wheelchair</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons hearing">Hearing Devices</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons captioning">Open Captioning</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons signing">Sign Language</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons autism">Autism Friendly</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-default btnIcons audio">Audio Description</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="filterCalendar" role="tabpanel" data-example-id="togglable-tabs">
+    					<ul id="filterDates" class="nav nav-tabs" role="tablist">
+      						<li role="presentation" class="datePicker active">
+      							<a href="#dateRange" id="dateRange-tab" role="tab" data-toggle="tab" aria-controls="dateRange" aria-expanded="true">
+      								View Date Range
+      							</a>
+      						</li>
+      						<li role="presentation" class="singleDate">
+      							<a href="#singleDate" role="tab" id="singleDate-tab" data-toggle="tab" aria-controls="singleDate" aria-expanded="false">
+      								View Single Date
+      							</a>
+      						</li>
+    					</ul>
+    					<div id="myTabContent" class="tab-content">
+      						<div role="tabpanel" class="tab-pane fade active in" id="dateRange" aria-labelledby="home-tab">
+        						<div class="btn btn-default">
+        							Monday June 21, 2016
+        						</div>
+        						
+        						<div class="btn btn-default">
+        							Monday June 28, 2016
+        						</div>
+      						</div>
+      						<div role="tabpanel" class="tab-pane fade" id="singleDate" aria-labelledby="profile-tab">
+        						<p>There's some stuff gonna go here...</p>
+      						</div>
+    					</div><!-- /tab-content -->
+  					</div><!-- /filterCalendar -->
+				</div> <!-- /col-sm-6 -->
+
+	   			
+				<div class="container">
+					<button class="btn btn-default filterButton">Click To Filter Shows</button>
+					<div class="row filterResults">
+						Now displaying <span>09</span> out of 35 shows
+					</div>
+				</div>
+		   	</div> <!-- /row -->
+		</div> <!-- /container -->
+		
+  	</div> <!-- /hero -->
+  	
+ 	<div class="mainContent">
+ 		<div class="container">
+ 			<div class="row contentArea">
+ 				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">Aladdin on Broadway</h3>
+							<h4 class="showLocation">New Amsterdam Theatre</h4>
+							<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>
+					</div>
+				</div> <!-- /col-sm-4 --> 
+				
+ 				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
+							<h4 class="showLocation">Walter Kerr Theatre</h4>
+							<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>	
+					</div>
+				</div> <!-- /col-sm-4 -->
+				 
+ 				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">Aladdin on Broadway</h3>
+							<h4 class="showLocation">New Amsterdam Theatre</h4>
+							<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>
+					</div>
+				</div> <!-- /col-sm-4 -->
+			</div>
+			<div class="row contentArea">	
+				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">Aladdin on Broadway</h3>
+							<h4 class="showLocation">New Amsterdam Theatre</h4>
+							<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>
+					</div>
+				</div> <!-- /col-sm-4 --> 
+				
+ 				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
+							<h4 class="showLocation">Walter Kerr Theatre</h4>
+								<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>	
+					</div>
+				</div> <!-- /col-sm-4 -->
+				
+ 				<div class="col-sm-4">
+					<div class="mediaBlock">
+						<div class="showImg">
+							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+						</div>
+						<div class="showInfo">
+							<h3 class="showTitle">Aladdin on Broadway</h3>
+							<h4 class="showLocation">New Amsterdam Theatre</h4>
+							<div class="iconsContainer">
+								<div class="filterIcons wheelchairSmall">Wheelchair</div>
+								<div class="filterIcons hearingSmall">Hearing</div>
+								<div class="filterIcons captioningSmall">Captioning</div>
+								<div class="filterIcons signingSmall">Signing</div>
+								<div class="filterIcons autismSmall">Autism</div>
+								<div class="filterIcons audioSmall">Audio</div>	
+							</div>
+						</div>
+						<div class="showMore">Click To View Show</div>
+					</div>
+				</div> <!-- /col-sm-4 -->
+ 			</div> <!--row contentArea -->
+ 		</div> <!-- /container -->
+ 	</div> <!-- /mainContent -->
+   	
+   	<footer>
+   		<div class="container">
+   			<div class="row">
+   				<div class="col-sm-6 leftFooter">
+   					<h4>Theatre Access NYC</h4>
+   					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
+   					<h4>A Service Of</h4>
+   					<img src="img/tdfFooter.png" alt="Theatre Development Fund">
+   					<img src="img/tblFooter.png" alt="The Broadway League">
+   				</div>
+   				<div class="col-sm-6 rightFooter">
+   					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN & DEVELOPMENT BY INFLEXION INTERACTIVE</p>
+   				</div>	
+   			</div>
+   			
+   		</div>
+   		
+   	</footer>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+

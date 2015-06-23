@@ -1,0 +1,517 @@
+/*
+Custom CSS
+*/
+
+
+body {
+    background: #fff;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+.container-fluid {
+	position: relative;
+}
+
+
+/*--- Navigation - Top Bar - Desktop ---*/
+
+.topBar {
+    max-height: 70px;
+    background: #101010;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+.whiteBar {
+	max-height: 70px;
+	background-color: #ffffff;
+	height: 60px;
+	color: #313131;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+	z-index: 0;
+}
+
+#navbar {
+	width: 36%;
+	float: left;
+	letter-spacing: 2px;
+	height: 60px;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background: none;
+	border-top: 4px solid #d22027;
+	padding-top: 11px;
+}
+
+.navbar-default {
+	margin-left: 0;
+	padding-right: 0;
+	background: #101010;
+	border-radius: 0;
+    border: 0;
+}
+
+.navbar-brand, .navbar-nav > li > a {
+	text-shadow: none;
+	font-weight: 700;
+	font-size: 12px;
+	color: #ffffff !important;
+	
+}
+
+.branding > a {
+	position: absolute;
+	top: -35px;
+	right: 45%;
+	width: 162px;
+	z-index: 100;
+	float: left;
+}
+
+.branding > a > h1 > img {
+	max-width: 100%;
+	display: block;
+}
+
+.headerRight {
+	float: right;
+	display: block;
+	width: 42%;
+	padding-top: 18px;
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 300;
+	font-size: 14px;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+.filterHeader,
+.filterHeaderRight {
+	padding-top: 18px;
+	padding-left: 10%;
+}
+
+.filterHeaderRight {
+	padding-left: 12%;
+}
+
+
+/*--- Hero - Header Section ---*/
+
+.hero {
+    background-image: url(../img/heroBg.jpg);
+	background-size: cover;
+	height: 560px;
+}
+
+
+/*--- Filter Buttons with Icons ---*/
+
+.filterBtn {
+	margin-top: 50px;
+}
+
+.filterBtn > .col-sm-4 > .btn-default {
+	height: 150px;
+	width: 94%;
+	margin: 8% 3%;
+}
+
+.filterBtn > .col-sm-4 > .btn-default:hover {
+	background-color: #d22027;
+}
+
+.btnIcons {
+	padding-top: 74%;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	text-shadow: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	background-repeat: no-repeat;
+	-webkit-transition: background 0.3s ease-in-out;
+  	-moz-transition: background 0.3s ease-in-out;
+  	-o-transition: background 0.3s ease-in-out;
+  	transition: background 0.3s ease-in-out;
+}
+
+.btnIcons:hover {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+.wheelchair {
+	background-image: url(../img/icon-wheelchairGrey.png);
+	background-position: 36px 16px;
+}
+
+.wheelchair:hover {
+	background-image: url(../img/icon-wheelchair.png);
+	background-position: 36px 20px;
+}
+
+.hearing {
+	background-image: url(../img/icon-hearingGrey.png);
+	background-position: 32px 10px;
+}
+
+.hearing:hover {
+	background-image: url(../img/icon-hearing.png);
+	background-position: 32px 14px;
+}
+
+.captioning {
+	background-image: url(../img/icon-captioningGrey.png);
+	background-position: 21px 38px;
+}
+
+.captioning:hover {
+	background-image: url(../img/icon-captioning.png);
+	background-position: 21px 42px;
+}
+
+.signing {
+	background-image: url(../img/icon-signingGrey.png);
+	background-position: 28px 20px;
+}
+
+.signing:hover {
+	background-image: url(../img/icon-signing.png);
+	background-position: 28px 24px;
+}
+
+.autism {
+	background-image: url(../img/icon-autismGrey.png);
+	background-position: 42px 24px;
+}
+
+.autism:hover {
+	background-image: url(../img/icon-autism.png);
+	background-position: 42px 28px;
+}
+
+.audio {
+	background-image: url(../img/icon-audioGrey.png);
+	background-position: 12px 38px;
+}
+
+.audio:hover {
+	background-image: url(../img/icon-audio.png);
+	background-position: 12px 42px;
+}
+
+/*--- Small Filter Icons ---*/
+.iconsContainer {
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+.filterIcons {
+	height: 40px;
+	width: 15%;
+	margin-right: 2%;
+	float: left;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	-webkit-transition: background 0.3s ease-in-out;
+  	-moz-transition: background 0.3s ease-in-out;
+  	-o-transition: background 0.3s ease-in-out;
+  	transition: background 0.3s ease-in-out;
+}
+
+.filterIcons:hover {
+	background: #d22027;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	text-indent: -9999px
+}
+
+.filterIcons:last-of-type {
+	margin-right: 0;
+}
+
+.wheelchairSmall {
+	background-image: url(../img/icon-wheelchairGrey.png);
+	background-size: 60% 80%;
+	background-position: 40% 50%;
+}
+
+.wheelchairSmall:hover {
+	background-image: url(../img/icon-wheelchair.png);
+	background-size: 60% 80%;
+	background-position: 40% 35%;
+}
+
+.hearingSmall {
+	background-image: url(../img/icon-hearingGrey.png);
+	background-size: 60% 80%;
+	background-position: 50% 40%;
+}
+
+.hearingSmall:hover {
+	background-image: url(../img/icon-hearing.png);
+	background-size: 60% 80%;
+	background-position: 50% 25%;
+}
+
+.captioningSmall {
+	background-image: url(../img/icon-captioningGrey.png);
+	background-size: 70% 70%;
+	background-position: 40% 50%;
+}
+
+.captioningSmall:hover {
+	background-image: url(../img/icon-captioning.png);
+	background-size: 70% 70%;
+	background-position: 40% 35%;
+}
+
+.signingSmall {
+	background-image: url(../img/icon-signingGrey.png);
+	background-size: 80% 80%;
+	background-position: 50% 40%;
+}
+
+.signingSmall:hover {
+	background-image: url(../img/icon-signing.png);
+	background-size: 80% 80%;
+	background-position: 50% 25%;
+}
+
+.autismSmall {
+	background-image: url(../img/icon-autismGrey.png);
+	background-size: 60% 70%;
+	background-position: 50% 40%;
+}
+
+.autismSmall:hover {
+	background-image: url(../img/icon-autism.png);
+	background-size: 60% 70%;
+	background-position: 50% 25%;
+}
+
+.audioSmall {
+	background-image: url(../img/icon-audioGrey.png);
+	background-size: 80% 60%;
+	background-position: 50% 50%;
+}
+
+.audioSmall:hover {
+	background-image: url(../img/icon-audio.png);
+	background-size: 80% 60%;
+	background-position: 50% 35%;
+}
+
+/*--- Filter Calendar with Date Picker ---*/
+
+.filterCalendar {
+	margin-top: 63px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	height: 326px
+}
+
+#filterDates > li {
+	width: 50%;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	text-shadow: none;
+}
+
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li > a,
+.nav-tabs > li {
+	margin-right: 0;
+	margin-bottom: 0;
+	border: 0;
+	border-color: transparent;
+}
+
+.datePicker,
+.datePicker:hover,
+.datePicker:active {
+	border-radius: 8px 0 0 0;
+}
+
+.singleDate,
+.singleDate:hover, 
+.singleDate:active {
+	border-radius: 0 8px 0 0;
+}
+
+.singleDate:hover {
+	background-color: #313131;
+}
+
+.singleDate {
+	background-color: #272727;
+}
+
+.singleDate > a {
+	color: #ffffff;
+}
+
+.tab-pane {
+	padding: 20px;
+}
+
+.filterButton,
+.filterResults {
+	display: block;
+	margin: 24px auto;
+	padding: 12px 36px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: none;
+}
+
+.filterResults {
+	background-color: #272727;
+	color: #ffffff;
+	font-size: 16px;
+	letter-spacing: 1px
+}
+
+.filterResults 	> span {
+	color: #d22027;
+}
+
+
+.mainContent {
+	background-color: #fff;
+}
+
+.contentArea {
+	margin-top: -34px;
+	background-color: #fff;
+	min-height: 450px;
+	margin-left: 0px;
+	margin-right: 0px
+}
+
+/*--- Media Blocks/Individual Shows ---*/
+
+.mediaBlock {
+	margin-top: 24px;
+	display: block;
+	border-radius: 8px;
+	background-color: #f1f0f0;
+}
+
+.showImg > img {
+	border-radius: 8px 8px 0 0;
+	width: 100%;
+}
+
+.showInfo {
+	padding: 10px 30px;
+	margin-bottom: 32px;
+	display: block;
+}
+
+.showMore {
+	display: block;
+	clear: both;
+	width: 100%;
+	border-radius: 0 0 8px 8px;
+	background-color: #272727;
+	color: #ffffff;
+	padding: 10px 36px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.showTitle {
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 90%
+}
+
+.showLocation {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+
+footer {
+	width: 100%;
+	background-image: url(../img/heroBg.jpg);
+	background-position: center bottom;
+	padding-top: 20px;
+	padding-bottom: 70px;
+}
+
+.leftFooter img {
+	margin-right: 20px;
+}
+
+.rightFooter {
+	position: relative;
+}
+
+footer h4 {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+footer p {
+	color: #ffffff;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+
+footer .copyright {
+	position: absolute;
+	bottom: -260px;
+	right: 0;
+	color: #ffffff;
+	text-align: right;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	letter-spacing: 1px;
+	
+}
+
+
+
+
