@@ -3,6 +3,8 @@ Custom CSS
 */
 
 
+/*--- Basic Styles ---*/
+
 body {
     background: #fff;
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -13,6 +15,58 @@ body {
 	position: relative;
 }
 
+h4 {
+	color: #313131;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h5 {
+	color: #313131;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+p {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 155%;
+	color: #101010;
+}
+
+
+/*--- Text Color Variables ---*/
+.white {
+	color: #fff;
+}
+
+.black {
+	color: #313131;
+}
+
+/*--- Text Alignment ---*/
+.centerText {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.borderBottom {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 2px solid #ccc;
+}
+
+.greyBg {
+	background-color: #ebebeb;
+}
 
 /*--- Navigation - Top Bar - Desktop ---*/
 
@@ -403,8 +457,13 @@ body {
 }
 
 
+.homeContent {
+	background-color: #fff;
+}
+
 .mainContent {
 	background-color: #fff;
+	padding: 60px 0;
 }
 
 .contentArea {
@@ -422,6 +481,15 @@ body {
 	display: block;
 	border-radius: 8px;
 	background-color: #f1f0f0;
+}
+
+.imgBlock {
+	display: block;
+	text-align: center;
+}
+
+.imgBlock > img {
+	max-width: 100%;
 }
 
 .showImg > img {
@@ -509,8 +577,54 @@ footer .copyright {
 	font-size: 10px;
 	font-style: normal;
 	letter-spacing: 1px;
-	
 }
+
+/*-------------------------------------*/
+/*----------- ABOUT PAGE --------------*/
+/*-------------------------------------*/
+
+.heroSmall {
+    background-image: url(../img/heroBg.jpg);
+	background-size: cover;
+	background-position: center bottom;
+	height: 350px;
+	padding: 100px 0 0;
+}
+
+.heroSmall h4 {
+	font-size: 34px;
+}
+
+.borderBottom img {
+	margin-top: 14px;
+}
+
+
+/*-------------------------------------*/
+/*--------- HOW IT WORKS PAGE ---------*/
+/*-------------------------------------*/
+
+.gridContent {
+	padding: 30px;
+	text-align: center;
+}
+
+/* Icons */
+.gridImg {
+	display: block;
+	text-align: center;
+	min-height: 190px;
+}
+
+.gridImg > img {
+	max-width: 50%;
+}
+
+.gridContent p {
+	font-size: 14px;
+}
+
+
 
 
 
