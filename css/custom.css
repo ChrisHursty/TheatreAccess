@@ -1,18 +1,46 @@
 /*
 Custom CSS
+
+COLORS
+Red      - #d22027
+Dark Red - #8a0d12
+
+1.  Basic Styles
+2.  Basic Structure
+3.  Navigation
+4.  Big Icons
+5.  Small Icons
+6.  Home Page
+7.  About Page
+8.  How It Works Page
+9.  BX Slider Styles (Single Show Page)
+10. Sidebar
+11. Media Queries
+
 */
 
-
-/*--- Basic Styles ---*/
+/*-----------------------*/
+/*--- 1. Basic Styles ---*/
+/*-----------------------*/
 
 body {
     background: #fff;
     font-family: 'Open Sans', Helvetica, sans-serif;
 	box-sizing: border-box;
+	width: 100%;
 }
 
 .container-fluid {
 	position: relative;
+}
+
+.mobileNavBg {
+	z-index: 100;
+	background-color: #101010;
+}
+
+h1.showTitle {
+	font-size: 36px;
 }
 
 h4 {
@@ -39,6 +67,46 @@ p {
 	color: #101010;
 }
 
+ul li, ol li {
+	letter-spacing: 1px;
+}
+
+/*-----------------------*/
+/*--2. Basic Structure --*/
+/*-----------------------*/
+
+.homeContent {
+	background-color: #fff;
+}
+
+.mainContent {
+	background-color: #fff;
+	padding: 60px 0;
+}
+
+.innerContent {
+	padding: 30px 0;
+}
+
+.howItWorks {
+	background-color: #fff;
+	padding: 0;
+}
+
+.contentArea {
+	margin-top: -34px;
+	background-color: #fff;
+	min-height: 450px;
+	margin-left: 0px;
+	margin-right: 0px
+}
+
+/*--- Remove Default Margins from Bootstrap col-* ---*/
+.zeroMargin {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 
 /*--- Text Color Variables ---*/
 .white {
@@ -49,9 +117,14 @@ p {
 	color: #313131;
 }
 
+
 /*--- Text Alignment ---*/
 .centerText {
 	text-align: center;
+}
+
+.justifyText {
+	text-align: justify;
 }
 
 .right {
@@ -59,17 +132,65 @@ p {
 }
 
 .borderBottom {
-	padding-bottom: 40px;
-	margin-bottom: 40px;
-	border-bottom: 2px solid #ccc;
+	padding-bottom: 60px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid #101010;
 }
 
 .greyBg {
 	background-color: #ebebeb;
 }
 
-/*--- Navigation - Top Bar - Desktop ---*/
 
+/* Edit Default "Burger" Menu for smaller screens */
+.navbar-toggle {
+	border-radius: 0px;
+	border-width: 2px;
+}
+.navbar-default .navbar-toggle {
+	background-color: #000;
+	border-color: #d22027;
+}
+.navbar-default .navbar-toggle:hover {
+	background-color: #8a0d12;
+	transition: background-color 0.5s ease-out;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #d22027;
+}
+
+.navbar-default .navbar-toggle:focus {
+	background-color: #ccc;
+}
+
+
+/*--- Edit Default Bootstrap Button Styles ---*/
+
+.btn {
+	border-radius: 0px;
+	border: 0;
+	background-color: #252525;
+	text-shadow: 0;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 6px 36px;
+}
+
+.btn-default {
+	text-shadow: 0 0 0;
+}
+
+.btn:hover {
+	background-color: #555;
+	color: #fff;
+	text-shadow: 0;
+}
+
+/*---------------------------------------*/
+/*--3. Navigation - Top Bar - Desktop ---*/
+/*---------------------------------------*/
 .topBar {
     max-height: 70px;
     background: #101010;
@@ -98,7 +219,7 @@ p {
 	height: 60px;
 }
 
-.navbar-default .navbar-nav > .active > a {
+.navbar-default .navbar-nav > li > a.active {
 	background: none;
 	border-top: 4px solid #d22027;
 	padding-top: 11px;
@@ -117,19 +238,18 @@ p {
 	font-weight: 700;
 	font-size: 12px;
 	color: #ffffff !important;
-	
 }
 
 .branding > a {
 	position: absolute;
-	top: -35px;
+	top: -15px;
 	right: 45%;
 	width: 162px;
 	z-index: 100;
 	float: left;
 }
 
-.branding > a > h1 > img {
+.branding > a > img {
 	max-width: 100%;
 	display: block;
 }
@@ -166,8 +286,9 @@ p {
 	height: 560px;
 }
 
-
-/*--- Filter Buttons with Icons ---*/
+/*-----------------------*/
+/*-----4. Big Icons -----*/
+/*-----------------------*/
 
 .filterBtn {
 	margin-top: 50px;
@@ -266,7 +387,11 @@ p {
 	background-position: 12px 42px;
 }
 
-/*--- Small Filter Icons ---*/
+
+/*-----------------------*/
+/*----5. Small Icons ----*/
+/*-----------------------*/
+
 .iconsContainer {
 	width: 100%;
 	display: block;
@@ -372,6 +497,7 @@ p {
 	background-position: 50% 35%;
 }
 
+
 /*--- Filter Calendar with Date Picker ---*/
 
 .filterCalendar {
@@ -457,25 +583,9 @@ p {
 }
 
 
-.homeContent {
-	background-color: #fff;
-}
-
-.mainContent {
-	background-color: #fff;
-	padding: 60px 0;
-}
-
-.contentArea {
-	margin-top: -34px;
-	background-color: #fff;
-	min-height: 450px;
-	margin-left: 0px;
-	margin-right: 0px
-}
-
-/*--- Media Blocks/Individual Shows ---*/
-
+/*-----------------------*/
+/*---6. Home Styles -----*/
+/*-----------------------*/
 .mediaBlock {
 	margin-top: 24px;
 	display: block;
@@ -489,7 +599,7 @@ p {
 }
 
 .imgBlock > img {
-	max-width: 100%;
+	max-width: 70%;
 }
 
 .showImg > img {
@@ -579,8 +689,9 @@ footer .copyright {
 	letter-spacing: 1px;
 }
 
+
 /*-------------------------------------*/
-/*----------- ABOUT PAGE --------------*/
+/*-----------7. About Page ------------*/
 /*-------------------------------------*/
 
 .heroSmall {
@@ -601,28 +712,284 @@ footer .copyright {
 
 
 /*-------------------------------------*/
-/*--------- HOW IT WORKS PAGE ---------*/
+/*-------8. HOW IT WORKS PAGE ---------*/
 /*-------------------------------------*/
 
 .gridContent {
-	padding: 30px;
+	position: relative;
+	padding: 30px 0;
 	text-align: center;
+	width: 100%;
+	height: 460px;
+}
+
+.gridImg {
+	display: block;
+	width: 100%;
+	height: 200px;
 }
 
 /* Icons */
-.gridImg {
-	display: block;
-	text-align: center;
-	min-height: 190px;
+.gridImg > img {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+   	margin: auto;
+	max-width: 40%;
 }
 
-.gridImg > img {
-	max-width: 50%;
+.wideIcon > img {
+	max-width: 60%;
+	top: 50px;
 }
 
 .gridContent p {
 	font-size: 14px;
 }
+
+
+/*-------------------------------------*/
+/*--9. BX Slider Styles (SINGLE SHOW) -*/
+/*-------------------------------------*/
+
+.bx-wrapper .bx-controls-direction a {
+	margin-top: -35px;
+	width: 33px;
+	height: 70px;
+}
+
+.bx-wrapper .bx-prev {
+	background: url(../img/previousArrow.png) no-repeat 0 0; 
+}
+
+.bx-wrapper .bx-next {
+	right: 20px;
+	background: url(../img/nextArrow.png) no-repeat 0 0; 
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: 0 0;
+}
+	
+
+/*-------------------------------------*/
+/*--10. Sidebar Styles (SINGLE SHOW) --*/
+/*-------------------------------------*/
+
+/*
+Aside BG Color: #f1f0f0
+Sidebar Heading BG: #555555; 
+*/
+
+aside {
+	background: #f1f0f0;
+}
+
+
+/* Individual Areas of Sidebar*/
+.sideBlock {
+	margin: 32px 0;
+}
+
+.sidebarHeader {
+	background: #555555;
+	padding: 6px 0;
+	margin-bottom: 24px;
+}
+
+.sidebarSubHeader {
+	background: #555555;
+	text-align: left;
+	margin 24px 0;
+}
+
+.sidebarContainer {
+	width: 86%;
+	display: block;
+	float: left;
+	margin: 0 7%;
+}
+
+
+/*-------------------------------------*/
+/*---------11. Media Queries ----------*/
+/*-------------------------------------*/
+
+/*
+XS: 0 - 460px
+Sm: 461px - 767px
+Md: 768px - 991px
+Lg: 992px - 1199px
+XL: 1200px +
+*/
+
+
+/* XS Devices, Landscape Phone & Down */
+@media only screen and (max-width: 460px) {
+	
+	.headerRight {
+		width: 70%;
+	}
+	
+	#navbar {
+		margin-top: 0;
+		width: 110%;
+		float: right;
+		height: 130px;
+		text-align: right;
+		z-index: 50;
+	}
+	.navbar-nav {
+		margin: 0px -15px;
+	}
+	
+	/* Icons */
+	.gridImg > img {
+		max-width: 40%;
+	}
+
+	.wideIcon > img {
+		max-width: 50%;
+	}
+
+}
+
+/* Sm Devices, Portrait Phone & Down */
+@media only screen and (max-width: 767px) {
+	
+	.mainContent h4 {
+		text-align: center;
+	}
+	
+	.justifyText {
+		padding: 0;
+	}
+	
+	/* Header Adjustments for Mobile */
+	.branding > a {
+		position: absolute;
+		top: -15px;
+		left: -15px;
+		width: 140px;
+		z-index: 100;
+	}
+		
+	.navbar-nav {
+		margin: 0px -15px;
+	}
+	
+	.mobNav {
+		border-bottom: 1px solid #1b1b1b;
+	}
+	
+	.heroSmall {
+		height: auto;
+		padding-bottom: 50px;
+	}
+	
+	.gridContent {
+		height: auto;
+	}
+	
+	/* Footer Styles */
+	footer .copyright {
+		position: relative;
+		bottom: 0;
+		margin-top: 50px;
+		text-align: left;
+	}
+}
+
+
+/* Sm Devices, Portrait Phone */
+@media only screen and (min-width: 461px) and (max-width: 767px) {
+	
+	#navbar {
+		width: 110%;
+		float: right;
+		height: 130px;
+		text-align: right;
+		z-index: 50;
+	}
+	
+	.headerRight {
+		width: 75%;
+	}
+	
+	.gridImg {
+		height: 140px;	
+	}
+	
+	.wideIcon {
+		height: 160px;	
+	}
+	
+	/* Icons */
+	.gridImg > img {
+		max-width: 15%;
+	}
+
+	.wideIcon > img {
+		max-width: 30%;
+	}
+}
+
+
+/* Md Devices, Landscape Tablet */
+@media only screen and (max-width: 991px) {
+	.borderBottom {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #101010;
+	}
+	
+}
+
+/* Md Devices, Landscape Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	#navbar {
+		width: 44%;
+	}
+	.navbar-brand, .navbar-nav > li > a {
+		font-size: 11px;
+	}
+	
+	.nav > li > a {
+		padding: 15px 12px;
+	}
+	
+	.branding > a {
+		right: 38%;	
+	}
+}
+
+
+
+/* Lg Devices (992px and up) */
+@media only screen and (min-width: 992px) {
+	
+	/* Increase Height of Grid on "How It Works" Page */
+	.gridContent {
+		height: 500px;
+	}	
+}
+
+
+/* Md Devices, Landscape Tablet */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	
+	#navbar {
+		width: 38%;
+	}
+}
+
+
+
+
+
+
 
 
 

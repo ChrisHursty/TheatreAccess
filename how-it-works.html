@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,700italic,300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/custom.css">
-    
+    <!-- jQuery library (served from Google) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+   	<!-- Custom CSS  -->
+    <link rel="stylesheet" href="css/custom.css">    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,7 +29,7 @@
       	<div class="container">
 			<div class="row">
 				<nav class="navbar navbar-default">
-					<div class="container-fluid">
+					<div class="container-fluid mobileNavBg">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 								<span class="sr-only">Toggle navigation</span>
@@ -34,14 +40,14 @@
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="how-it-works.html">How It Works</a></li>
-								<li><a href="about.html">About</a></li>
+								<li class="mobNav"><a href="index.html">Home</a></li>
+								<li class="mobNav"><a class="active" href="how-it-works.html">How It Works</a></li>
+								<li class="mobNav"><a href="about.html">About</a></li>
 							</ul>
 						</div><!--/.nav-collapse -->
 						<div class="branding">
 							<a class="navbar-brand" href="#">
-								<h1><img src="img/logoLg.jpg" alt=""></h1>
+								<img src="img/logoLg.jpg" alt="Theatre Access NYC Logo" class="img-responsive">
 							</a>	
 						</div>
 
@@ -58,7 +64,7 @@
   	<div class="heroSmall">
 		<div class="container">
 			<div class="row"> 
-				<div class="col-sm-8 col-md-offset-2">
+				<div class="col-sm-12 col-md-8 col-md-offset-2">
 					<h4 class="subTitle white centerText">How it Works</h4>
 					<p class="white centerText">Broadway should be accessible to everyone, regardless of disability. Theatre Access NYC brings all the information you need to plan your trip to Broadway together in one easy-to-navigate place. Sometimes, though, the terms and logos may be confusing. So to help make accessibility accessible, we’re breaking it down for you. Here’s what you may need to know when searching for accessible shows.</p>
 				</div>
@@ -66,73 +72,69 @@
 		</div> <!-- /container -->
   	</div> <!-- /heroSmall -->
   	
- 	<div class="mainContent">
- 		<div class="container">
+ 	<div class="howItWorks">
+ 		<div class="container clearfix">
  			<div class="row">
- 			
- 				<div class="col-sm-4">
+ 
+ 				<div class="col-xs-12 col-sm-6 col-md-4">
 					<div class="gridContent">
 						<div class="gridImg">
-							<img src="img/icon-wheelchairRed.png" alt="Wheelchair Accessible Icon">
+							<img src="img/icon-wheelchairRed.png" alt="Wheelchair Accessible Icon" class="img-responsive">
 						</div>
 						<h5>Wheelchair Accessible</h5>
 						<p>When you’re looking for a venue that has wheelchair accessible hallways, bathrooms and entrances, this is the symbol you want to keep an eye out for.</p>
 					</div> <!-- /gridContent-->
 				</div> <!-- /col-sm-4 -->
 					
- 				<div class="col-sm-4">
+ 				<div class="col-xs-12 col-sm-6 col-md-4 greyBg">
 					<div class="gridContent greyBg">
 						<div class="gridImg">
-							<img src="img/icon-hearingRed.png" alt="Hearing Devices Icon">
+							<img src="img/icon-hearingRed.png" alt="Hearing Devices Icon" class="img-responsive">	
 						</div>
 						<h5>Hearing Devices</h5>
 						<p>Shows that accommodate those who have severe hearing loss, will have this icon displayed. It means that assisted listening devices are available that help to amplify the sounds on stage.</p>
 					</div> <!-- /gridContent-->
 				</div> <!-- /col-sm-4 -->
 				
-				<div class="col-sm-4">
+				<div class="col-xs-12 col-sm-6 col-md-4">
 					<div class="gridContent">
-						<div class="gridImg">
-							<img src="img/icon-captioningRed.png" alt="Open Captioning Icon">
+						<div class="gridImg wideIcon">
+							<img src="img/icon-captioningRed.png" alt="Open Captioning Icon" class="img-responsive">
 						</div>
 						<h5>Open Captioning</h5>
 						<p>For those who are severely hearing impaired, deaf or do not understand sign language, open captioning provides a way to follow what’s being said on stage. Much like closed captioning on your TV, open captioning displays text of all the words and sounds from the performance.</p>
 					</div> <!-- /gridContent-->
 				</div> <!-- /col-sm-4 -->
-				
- 			</div> <!-- /row -->
  			
- 			<div class="row">
- 				<div class="col-sm-4 greyBg">
+ 				<div class="col-xs-12 col-sm-6 col-md-4 greyBg">
 					<div class="gridContent">
-						<div class="gridImg">
-							<img src="img/icon-signingRed.png" alt="Sign Language Accessible Icon">
+						<div class="gridImg wideIcon">
+							<img src="img/icon-signingRed.png" alt="Sign Language Accessible Icon" class="img-responsive">
 						</div>
 						<h5>Sign Language Accessible</h5>
 						<p>Shows that have sign language services available will display this logo.</p>
 					</div> <!-- /gridContent-->	
 				</div> <!-- /col-sm-4 --> 
 					
- 				<div class="col-sm-4">
+ 				<div class="col-xs-12 col-sm-6 col-md-4">
 					<div class="gridContent">
 						<div class="gridImg">
-							<img src="img/icon-autismRed.png" alt="Autism Friendly Icon">
+							<img src="img/icon-autismRed.png" alt="Autism Friendly Icon" class="img-responsive">
 						</div>
 						<h5>Autism Friendly</h5>
 						<p>At shows that are autism friendly, slight adjustments to the production are made, including the reduction of any jarring sounds or strobe lights focused into the audience. Plus, in the theatre lobby there are quiet areas and an activity area, staffed with autism specialists, for those who need to leave their seats during the performance.</p>	
 					</div> <!-- /gridContent-->	
 				</div> <!-- /col-sm-4 --> 
 				
-				<div class="col-sm-4 greyBg">
+				<div class="col-xs-12 col-sm-6 col-md-4 greyBg">
 					<div class="gridContent">
-						<div class="gridImg">
-							<img src="img/icon-audioRed.png" alt="Audio Description Icon">
+						<div class="gridImg wideIcon">
+							<img src="img/icon-audioRed.png" alt="Audio Description Icon" class="img-responsive">
 						</div>
 						<h5>Audio Description</h5>
 						<p>For theater-goers who are blind or have impaired vision, a live narration is provided via headphones.</p>
 					</div> <!-- /gridContent-->	
 				</div> <!-- /col-sm-4 --> 
-
  			</div> <!-- /row -->
  			
  		</div> <!-- /container -->
@@ -149,17 +151,16 @@
    					<img src="img/tblFooter.png" alt="The Broadway League">
    				</div>
    				<div class="col-sm-6 rightFooter">
-   					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN & DEVELOPMENT BY INFLEXION INTERACTIVE</p>
+   					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN &amp; DEVELOPMENT BY INFLEXION INTERACTIVE</p>
    				</div>	
    			</div>
    			
    		</div>
    		
    	</footer>  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 

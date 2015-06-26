@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,700italic,300,400,700' rel='stylesheet' type='text/css'>
+    <!-- jQuery library (served from Google) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+   	<!-- Custom CSS  -->
     <link rel="stylesheet" href="css/custom.css">
-    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,7 +29,7 @@
       	<div class="container">
 			<div class="row">
 				<nav class="navbar navbar-default">
-					<div class="container-fluid">
+					<div class="container-fluid mobileNavBg">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 								<span class="sr-only">Toggle navigation</span>
@@ -34,14 +40,14 @@
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="how-it-works.html">How It Works</a></li>
-								<li><a href="about.html">About</a></li>
+								<li class="mobNav"><a href="index.html">Home</a></li>
+								<li class="mobNav"><a href="how-it-works.html">How It Works</a></li>
+								<li class="mobNav"><a class="active" href="about.html">About</a></li>
 							</ul>
 						</div><!--/.nav-collapse -->
 						<div class="branding">
 							<a class="navbar-brand" href="#">
-								<h1><img src="img/logoLg.jpg" alt=""></h1>
+								<img src="img/logoLg.jpg" alt="Theatre Access NYC Logo" class="img-responsive">
 							</a>	
 						</div>
 
@@ -58,9 +64,9 @@
   	<div class="heroSmall">
 		<div class="container">
 			<div class="row"> 
-				<div class="col-sm-8 col-md-offset-2">
-					<h4 class="subTitle white centerText">About Theatre Access NYC</h4>
-					<p class="white centerText">Theatre Access NYC provides assistance to theatregoers with disabilities. Those who are hard of hearing or deaf, have low vision or are blind, who cannot climb stairs or who require aisle seating or wheelchair locations, who are on the autism spectrum or have other developmental or cognitive disabilities now have one great place to find out everything you need to know to choose a show, buy tickets and plan your trip to Broadway.</p>
+				<div class="col-sm-10 col-sm-offset-1">
+					<h4 class="subTitle white centerText">Official Site for Accessibility to Broadway</h4>
+					<p class="white justifyText">Theatre Access NYC provides assistance to theatregoers with disabilities. Those who are hard of hearing or deaf, have low vision or are blind, who cannot climb stairs or who require aisle seating or wheelchair locations, who are on the autism spectrum or have other developmental or cognitive disabilities now have one great place to find out everything you need to know to choose a show, buy tickets and plan your trip to Broadway.</p>
 				</div>
 		   	</div> <!-- /row -->
 		</div> <!-- /container -->
@@ -71,14 +77,14 @@
  			<div class="row borderBottom">
  				<div class="col-sm-4">
  					<div class="imgBlock">
- 						<img src="img/logoLg.jpg" alt="Theatre Access NYC">	
+ 						<img src="img/logoNeg.jpg" alt="Theatre Access NYC">	
  					</div>
 				</div> <!-- /col-sm-4 --> 
 					
  				<div class="col-sm-8">
  					<h4>Theatre Access NYC</h4>
-					<p>Theatre Access NYC helps you easily find accessibility information on current Broadway shows including:</p>
-					<ol>
+					<p class="justifyText">Theatre Access NYC helps you easily find accessibility information on current Broadway shows including:</p>
+					<ul>
 						<li>Audio described</li>
 						<li>Open captioned</li>
 						<li>Sign language interpreted</li>
@@ -86,23 +92,9 @@
 						<li>Wheelchair seating locations for each production, as well as accessibility information on each venue</li>
 						<li>Availability of listening devices</li>
 						<li>Ticket purchasing options</li>
-					</ol>
+					</ul>
 					
-					<p>Theatre Access NYC is brought to you by TDF (Theatre Development Fund) and The Broadway League. It is the philosophy of both organizations that everyone, regardless of disability, should have access to the performing arts.</p>
-				</div> <!-- /col-sm-8 -->
-				<hr />
- 			</div> <!-- /row -->
- 			
- 			<div class="row borderBottom">
- 				<div class="col-sm-4">
- 					<div class="imgBlock">
- 						<img src="img/tdf.jpg" alt="The Development Fund">	
- 					</div>
-				</div> <!-- /col-sm-4 --> 
-					
- 				<div class="col-sm-8">
- 					<h4>The Development Fund</h4>
-					<p>Theatre Development Fund, a not-for-profit organization, was created with the conviction that the live theatrical arts afford a unique expression of the human condition that must be sustained and nurtured. TDF’s twofold mission is to identify and provide support, including financial assistance, to theatrical works of artistic merit and to encourage and enable diverse audiences to attend live theatre and dance in all their venues.</p>
+					<p class="justifyText">Theatre Access NYC is brought to you by TDF (Theatre Development Fund) and The Broadway League. It is the philosophy of both organizations that everyone, regardless of disability, should have access to the performing arts.</p>
 				</div> <!-- /col-sm-8 -->
 				<hr />
  			</div> <!-- /row -->
@@ -116,10 +108,25 @@
 					
  				<div class="col-sm-8">
  					<h4>The Broadway League</h4>
-					<p>The Broadway League is the national trade association for the Broadway industry. Our 700-plus members include theatre owners and operators, producers, presenters, and general managers in North American cities, as well as suppliers of goods and services to the commercial theatre industry.  Each year, League members bring Broadway to more than 30 million people in New York and more than 200 cities across the U.S. and Canada.</p>
+					<p class="justifyText">The Broadway League is the national trade association for the Broadway industry. Our 700-plus members include theatre owners and operators, producers, presenters, and general managers in North American cities, as well as suppliers of goods and services to the commercial theatre industry.  Each year, League members bring Broadway to more than 30 million people in New York and more than 200 cities across the U.S. and Canada.</p>
 				</div> <!-- /col-sm-8 -->
 				<hr>
  			</div> <!-- /row -->
+ 			
+ 			<div class="row borderBottom">
+ 				<div class="col-sm-4">
+ 					<div class="imgBlock">
+ 						<img src="img/tdf.jpg" alt="The Development Fund">	
+ 					</div>
+				</div> <!-- /col-sm-4 --> 
+					
+ 				<div class="col-sm-8">
+ 					<h4>The Development Fund</h4>
+					<p class="justifyText">Theatre Development Fund, a not-for-profit organization, was created with the conviction that the live theatrical arts afford a unique expression of the human condition that must be sustained and nurtured. TDF’s twofold mission is to identify and provide support, including financial assistance, to theatrical works of artistic merit and to encourage and enable diverse audiences to attend live theatre and dance in all their venues.</p>
+				</div> <!-- /col-sm-8 -->
+				<hr />
+ 			</div> <!-- /row -->
+ 			
  		</div> <!-- /container -->
  	</div> <!-- /mainContent -->
    	
@@ -134,17 +141,16 @@
    					<img src="img/tblFooter.png" alt="The Broadway League">
    				</div>
    				<div class="col-sm-6 rightFooter">
-   					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN & DEVELOPMENT BY INFLEXION INTERACTIVE</p>
+   					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN &amp; DEVELOPMENT BY INFLEXION INTERACTIVE</p>
    				</div>	
    			</div>
    			
    		</div>
    		
    	</footer>  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 
