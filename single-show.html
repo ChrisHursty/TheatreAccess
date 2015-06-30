@@ -46,7 +46,7 @@
 							</ul>
 						</div><!--/.nav-collapse -->
 						<div class="branding">
-							<a class="navbar-brand" href="#">
+							<a class="navbar-brand" href="index.html">
 								<img src="img/logoLg.jpg" alt="Theatre Access NYC Logo" class="img-responsive">
 							</a>	
 						</div>
@@ -74,22 +74,22 @@
   	
  	<div class="mainContent">
  		<div class="container">
- 			<div class="row borderBottom">
+ 			<div class="row">
  				<div class="row">
  					<div class="col-xs-12 col-sm-8">
 						<div class="homeLink">
-							<h4>Back Home</h4>
+							<a href="index.html">Back Home</a>
 						</div>
 					</div>
  				</div> <!-- /row -->
  				
- 				<div class="row">
+ 				<div class="row rightSideLinks">
  					<div class="col-xs-12 col-sm-8">
  						<h1 class="showTitle">Apollo Amateur Night</h1>
  					</div>
  					<div class="col-xs-12 col-sm-4 pagination">
- 						<h4><a href="">Previous Show</a></h4>
- 						<h4><a href="">Next Show</a></h4>
+ 						<a href="javascript:void" class="prevLink">Previous Show</a>
+ 						<a href="javascript:void" class="nextLink">Next Show</a>
  					</div>
  				</div> <!-- /row -->
  				
@@ -104,7 +104,7 @@
  				</div> <!-- /row -->
  				<div class="row innerContent">
  					<!-- Sidebar -->
-					<div class="col-sm-4 zeroPadding">
+					<div class="col-sm-4">
 						<aside class="clearfix">
 							<header class="sidebarHeader">
 								<h4 class="white centerText">Your Search Criteria</h4>
@@ -123,17 +123,51 @@
 									<p>June 01, 2015 - June 15, 2015</p>
 								</div>
 
-								<div class="sideBlock">
+								<section class="sideBlock">
 									<h4>Accessibility Options</h4>
 									<ul class="showDetails">
 										<li>Wheelchair Access</li>
 										<li>Audio Description</li>
 									</ul>
-								</div> <!-- /sidebarContainer -->
+								</section> <!-- /sidebarContainer -->
 								
-								<button class="btn btn-class">Buy Tickets</button>	
+								<button class="btn btn-class rectangleBtn">Buy Tickets</button>
+								<hr class="grey">
 							</div>
-							<hr>
+							
+							
+							<div class="sidebarContainer">
+								<header class="sidebarSubHeader">
+									<h4 class="white centerText">Show Details</h4>
+								</header>
+								<section class="sideBlock">
+									<h4>Run Dates</h4>
+									<p>June 01, 2015 - December 31, 2016</p>
+								</section>
+
+								<section class="sideBlock">
+									<h4>Theatre Details</h4>
+									<p>47th Street Theatre</p>
+									<p>304 West 47th Street, New York, NY 10036</p>
+									<p class="uppercase"><a href="#">View On Map</a> | <a href="#" target="_blank">Theatre Website</a></p>
+								</section> <!-- /sideBlock -->
+								
+								<section class="sideBlock">
+									<h4>Public Transportation</h4>
+									<p><strong>By Subway:</strong>1, 2, 3, 7, S, R, Q, N, A, C, E to 42nd Street/Times Square</p>
+								</section> <!-- /sideBlock -->
+								
+								<section class="sideBlock">
+									<h4>Additional Accessibility Details</h4>
+									<p><strong>Wheelchairs: </strong>Accessible</p>
+									<p><strong>Seating Notes: </strong>Orchestra section has 1 to 2 steps per row</p>
+									<p><strong>Elevator or Escalator: </strong> None</p>
+									<p><strong>Entrance: </strong>There are 6 steps into the theatre</p>
+									<p><strong>Water Fountain: </strong>None</p>
+									<p><strong>Infrared Lighting System: </strong>None</p>
+								</section> <!-- /sideBlock -->
+	
+							</div> <!-- /sideContainer -->
 							
 						</aside>
 
@@ -141,17 +175,32 @@
 					</div> <!-- /col-sm-4 --> 
 					<!-- /Sidebar -->
 
-					<div class="col-sm-8">
-						<h4>Show Description</h4>
-						<p class="justifyText">Amateur Night at the Apollo debuted in 1934, is the Theater’s longest-running performance series, and has become the quintessential talent competition, serving as the model for Star Search and American Idol. Competitions are held nearly every Wednesday evening throughout the year, culminating in December with the Super Top Dog competition.</p>
-						<p class="justifyText">A brand new line-up of contestants competes for the chance to move on up in the Amateur Night competition at the April 23 Show Off. It all leads to the chance to win the title of 2014 Super Top Dog and a cash prize of $10,000!</p>
-						<p class="justifyText">Aspiring musicians, singers, dancers, comedians, rappers and spoken word artists try their best to please the audiences that can make them an Apollo legend. Get ready to cheer or jeer as you decide who stays and who gets booted off stage. At Amateur Night, you tell the performers to be good or be gone!</p>
-						<p class="justifyText">Amateur Night at the Apollo is hosted by the comedian Capone. Each show begins with a festive pre-party featuring video and music by DJ Jess. And keep a lookout for master impressionist C.P. Lacey, the resident Executioner who sweeps bad talent off the stage.</p>
-						<p class="justifyText">The contestants are Maddy Seitles, Yuza Nishikawa, Vanessa Atristain, Vlad Dorson, Xilomen, Kaylah Vereen, Marcus Phillips, Ghost, Devastation Dance Crew and Tracey Smith.</p>
+					<div class="col-sm-7 socialBorder">
+						<section>
+							<h4>Show Description</h4>
+							<p class="justifyText">Amateur Night at the Apollo debuted in 1934, is the Theater’s longest-running performance series, and has become the quintessential talent competition, serving as the model for Star Search and American Idol. Competitions are held nearly every Wednesday evening throughout the year, culminating in December with the Super Top Dog competition.</p>
+							<p class="justifyText">A brand new line-up of contestants competes for the chance to move on up in the Amateur Night competition at the April 23 Show Off. It all leads to the chance to win the title of 2014 Super Top Dog and a cash prize of $10,000!</p>
+							<p class="justifyText">Aspiring musicians, singers, dancers, comedians, rappers and spoken word artists try their best to please the audiences that can make them an Apollo legend. Get ready to cheer or jeer as you decide who stays and who gets booted off stage. At Amateur Night, you tell the performers to be good or be gone!</p>
+							<p class="justifyText">Amateur Night at the Apollo is hosted by the comedian Capone. Each show begins with a festive pre-party featuring video and music by DJ Jess. And keep a lookout for master impressionist C.P. Lacey, the resident Executioner who sweeps bad talent off the stage.</p>
+							<p class="justifyText">The contestants are Maddy Seitles, Yuza Nishikawa, Vanessa Atristain, Vlad Dorson, Xilomen, Kaylah Vereen, Marcus Phillips, Ghost, Devastation Dance Crew and Tracey Smith.</p>
+							<button class="btn btn-default rectangleBtn">Click To Visit Show Website</button>
+						</section>
+
+						<section>
+							<h4>Press</h4>
+							<a href="#">This is the Headline of the Article - New York Times, 2/6/13</a><br />
+							<a href="#">This is the Headline of the Article - New York Times, 2/6/13</a><br />
+							<a href="#">This is the Headline of the Article - New York Times, 2/6/13</a>
+						</section>	
 						
-						<button class="btn btn-default">Click To Visit Show Website</button>
-	
-					</div> <!-- /col-sm-8 -->	
+					</div> <!-- /col-sm-7 -->
+					<div class="col-sm-1 socialSharing">
+						<h5 class="centerText uppercase">Share</h5>
+						<a href="#" target="_blank" class="facebook">Facebook</a>
+						<a href="#" target="_blank" class="twitter">Twitter</a>
+						<a href="#" target="_blank" class="youtube">YouTube</a>
+						<a href="#" target="_blank" class="googleplus">Google+</a>
+					</div> <!-- /col-sm-8 -->
  				</div> <!-- /row innerContent -->
  				
  			</div> <!-- /row -->

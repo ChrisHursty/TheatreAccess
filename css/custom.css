@@ -13,7 +13,7 @@ Dark Red - #8a0d12
 6.  Home Page
 7.  About Page
 8.  How It Works Page
-9.  BX Slider Styles (Single Show Page)
+9.  Single Show & BX Slider
 10. Sidebar
 11. Media Queries
 
@@ -28,6 +28,23 @@ body {
     font-family: 'Open Sans', Helvetica, sans-serif;
 	box-sizing: border-box;
 	width: 100%;
+	font-size: 100%;
+}
+
+
+p {
+  line-height: 1.5;
+}
+
+span {
+  cursor: pointer;
+}
+
+.js-font-decrease {
+  font-size: 75%;
+}
+.js-font-increase {
+  font-size: 125%;
 }
 
 .container-fluid {
@@ -35,6 +52,7 @@ body {
 }
 
 .mobileNavBg {
+	padding-top: 6px;
 	z-index: 100;
 	background-color: #101010;
 }
@@ -71,6 +89,17 @@ ul li, ol li {
 	letter-spacing: 1px;
 }
 
+hr.grey {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 0;
+	border: 1px solid #ccc;
+}
+
+a {
+	color: #d22027;	
+}
+
 /*-----------------------*/
 /*--2. Basic Structure --*/
 /*-----------------------*/
@@ -94,11 +123,9 @@ ul li, ol li {
 }
 
 .contentArea {
-	margin-top: -34px;
 	background-color: #fff;
 	min-height: 450px;
-	margin-left: 0px;
-	margin-right: 0px
+	margin: -34px 0 60px 0;
 }
 
 /*--- Remove Default Margins from Bootstrap col-* ---*/
@@ -108,7 +135,7 @@ ul li, ol li {
 }
 
 
-/*--- Text Color Variables ---*/
+/*--- Text Variables ---*/
 .white {
 	color: #fff;
 }
@@ -117,14 +144,16 @@ ul li, ol li {
 	color: #313131;
 }
 
-
-/*--- Text Alignment ---*/
 .centerText {
 	text-align: center;
 }
 
 .justifyText {
 	text-align: justify;
+}
+
+.uppercase {
+	text-transform:uppercase;
 }
 
 .right {
@@ -166,7 +195,7 @@ ul li, ol li {
 
 /*--- Edit Default Bootstrap Button Styles ---*/
 
-.btn {
+.rectangleBtn {
 	border-radius: 0px;
 	border: 0;
 	background-color: #252525;
@@ -222,7 +251,8 @@ ul li, ol li {
 .navbar-default .navbar-nav > li > a.active {
 	background: none;
 	border-top: 4px solid #d22027;
-	padding-top: 11px;
+	padding-top: 17px;
+	margin-top: -6px;
 }
 
 .navbar-default {
@@ -283,29 +313,33 @@ ul li, ol li {
 .hero {
     background-image: url(../img/heroBg.jpg);
 	background-size: cover;
-	height: 560px;
+	min-height: 560px;
 }
 
 /*-----------------------*/
 /*-----4. Big Icons -----*/
 /*-----------------------*/
 
+
 .filterBtn {
 	margin-top: 50px;
+	list-style: none;
+	text-align: center;
 }
 
 .filterBtn > .col-sm-4 > .btn-default {
 	height: 150px;
-	width: 94%;
-	margin: 8% 3%;
+	width: 100%;
+	margin: 8% auto;
 }
 
-.filterBtn > .col-sm-4 > .btn-default:hover {
+.filterBtn > .col-sm-4 > .btn-default:hover,
+.filterBtn > .col-sm-4 > .btn-default.selected {
 	background-color: #d22027;
 }
 
 .btnIcons {
-	padding-top: 74%;
+	padding-top: 82%;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
@@ -322,7 +356,8 @@ ul li, ol li {
   	transition: background 0.3s ease-in-out;
 }
 
-.btnIcons:hover {
+.btnIcons:hover,
+.btnIcons.selected {
 	color: #ffffff;
 	border: 1px solid #ffffff;
 }
@@ -332,7 +367,8 @@ ul li, ol li {
 	background-position: 36px 16px;
 }
 
-.wheelchair:hover {
+.wheelchair:hover,
+.wheelchair.selected {
 	background-image: url(../img/icon-wheelchair.png);
 	background-position: 36px 20px;
 }
@@ -342,7 +378,8 @@ ul li, ol li {
 	background-position: 32px 10px;
 }
 
-.hearing:hover {
+.hearing:hover,
+.hearing.selected {
 	background-image: url(../img/icon-hearing.png);
 	background-position: 32px 14px;
 }
@@ -352,7 +389,8 @@ ul li, ol li {
 	background-position: 21px 38px;
 }
 
-.captioning:hover {
+.captioning:hover,
+.captioning.selected {
 	background-image: url(../img/icon-captioning.png);
 	background-position: 21px 42px;
 }
@@ -362,7 +400,8 @@ ul li, ol li {
 	background-position: 28px 20px;
 }
 
-.signing:hover {
+.signing:hover,
+.signing.selected {
 	background-image: url(../img/icon-signing.png);
 	background-position: 28px 24px;
 }
@@ -372,7 +411,8 @@ ul li, ol li {
 	background-position: 42px 24px;
 }
 
-.autism:hover {
+.autism:hover,
+.autism.selected {
 	background-image: url(../img/icon-autism.png);
 	background-position: 42px 28px;
 }
@@ -382,7 +422,8 @@ ul li, ol li {
 	background-position: 12px 38px;
 }
 
-.audio:hover {
+.audio:hover,
+.audio.selected {
 	background-image: url(../img/icon-audio.png);
 	background-position: 12px 42px;
 }
@@ -396,6 +437,7 @@ ul li, ol li {
 	width: 100%;
 	display: block;
 	float: left;
+	margin: 12px 0 24px;
 }
 
 .filterIcons {
@@ -558,10 +600,10 @@ ul li, ol li {
 	padding: 20px;
 }
 
-.filterButton,
+/*.filterButton,*/
 .filterResults {
 	display: block;
-	margin: 24px auto;
+	margin: 90px auto 0;
 	padding: 12px 36px;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -572,6 +614,7 @@ ul li, ol li {
 }
 
 .filterResults {
+	display: block;
 	background-color: #272727;
 	color: #ffffff;
 	font-size: 16px;
@@ -613,7 +656,7 @@ ul li, ol li {
 	display: block;
 }
 
-.showMore {
+.showMore a {
 	display: block;
 	clear: both;
 	width: 100%;
@@ -691,7 +734,7 @@ footer .copyright {
 
 
 /*-------------------------------------*/
-/*-----------7. About Page ------------*/
+/*-----------7. ABOUT PAGE ------------*/
 /*-------------------------------------*/
 
 .heroSmall {
@@ -750,8 +793,74 @@ footer .copyright {
 
 
 /*-------------------------------------*/
-/*--9. BX Slider Styles (SINGLE SHOW) -*/
+/*----- 9. Single Show & BX Slider ----*/
 /*-------------------------------------*/
+
+.rightSideLinks {
+	padding-right: 20px;
+}
+
+.homeLink a {
+	color: #313131;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: color 0.3s linear;
+}
+
+.homeLink a:hover {
+	color: #d22027;
+	text-decoration: none;
+}
+
+.homeLink > a:before {
+	content: "\003C";
+	padding-right: 12px;
+}
+
+.pagination {
+	background-color: #313131;
+	display: block;
+	border-radius: 0px;
+	padding: 6px 12px;
+	margin-right: -15px;
+}
+
+.pagination a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	transition: color 0.3s linear;
+}
+
+.pagination a:hover {
+	color: #d22027;
+	text-decoration: none;
+}
+
+.prevLink {
+	float: left;
+}
+
+.prevLink:before {
+	content: "\003C";
+	padding-right: 12px;
+	margin-left: 12px;
+}
+
+.nextLink {
+	float: right;
+}
+
+
+.nextLink:after {
+	content: "\003E";
+	padding-right: 12px;
+	margin-left: 12px;
+}
 
 .bx-wrapper .bx-controls-direction a {
 	margin-top: -35px;
@@ -771,7 +880,67 @@ footer .copyright {
 .bx-wrapper .bx-next:hover {
 	background-position: 0 0;
 }
+
+/* --- Social Sharing --- */
+
+.socialBorder {
+	border-right: 1px solid #000;
+	height: auto;
+}
+
+.socialSharing > a {
+	display: block;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	margin: 20px auto;
+}
+
+.socialSharing > .facebook {
+	background-image: url(../img/facebook.png);
+	background-size: 18px 36px;
+	width: 18px;
+	height: 36px;
+}
+
+.socialSharing > .facebook:hover {
+	background-image: url(../img/facebookRed.png);
+}
+
+.socialSharing > .twitter {
+	background-image: url(../img/twitter.png);
+	background-size: 45px 31px;
+	width: 45px;
+	height: 31px;
 	
+}
+
+.socialSharing > .twitter:hover {
+	background-image: url(../img/twitterRed.png);
+}
+
+.socialSharing > .youtube {
+	background-image: url(../img/youtube.png);
+	background-size: 36px 43px;
+	width: 36px;
+	height: 43px;
+	
+}
+
+.socialSharing > .youtube:hover {
+	background-image: url(../img/youtubeRed.png);
+}
+
+.socialSharing > .googleplus {
+	background-image: url(../img/googleplus.png);
+	background-size: 35px 33px;
+	width: 35px;
+	height: 33px;
+	
+}
+
+.socialSharing > .googleplus:hover {
+	background-image: url(../img/googleplusRed.png);
+}
 
 /*-------------------------------------*/
 /*--10. Sidebar Styles (SINGLE SHOW) --*/
@@ -801,6 +970,7 @@ aside {
 .sidebarSubHeader {
 	background: #555555;
 	text-align: left;
+	padding: 1px 0;
 	margin 24px 0;
 }
 
@@ -813,7 +983,47 @@ aside {
 
 
 /*-------------------------------------*/
-/*---------11. Media Queries ----------*/
+/*-----11. Isotope Transitions --------*/
+/*-------------------------------------*/
+
+.isotope-item { 
+  z-index: 2; 
+} 
+  
+.isotope-hidden.isotope-item { 
+  pointer-events: none; 
+  z-index: 1; 
+} 
+  
+.isotope, 
+.isotope .isotope-item { 
+-webkit-transition-duration: 0.8s; 
+   -moz-transition-duration: 0.8s; 
+        transition-duration: 0.8s; 
+} 
+  
+.isotope { 
+-webkit-transition-property: height, width; 
+   -moz-transition-property: height, width; 
+        transition-property: height, width; 
+} 
+  
+.isotope .isotope-item { 
+-webkit-transition-property: -webkit-transform, opacity; 
+   -moz-transition-property:    -moz-transform, opacity; 
+        transition-property:         transform, opacity; 
+}
+
+.isotopw-reset {
+	background-color: dodgerblue;
+	display: block;
+	float: left;
+	
+}
+
+
+/*-------------------------------------*/
+/*---------12. Media Queries ----------*/
 /*-------------------------------------*/
 
 /*
@@ -858,6 +1068,11 @@ XL: 1200px +
 /* Sm Devices, Portrait Phone & Down */
 @media only screen and (max-width: 767px) {
 	
+	.topBar > .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
 	.mainContent h4 {
 		text-align: center;
 	}
@@ -872,6 +1087,7 @@ XL: 1200px +
 		top: -15px;
 		left: -15px;
 		width: 140px;
+		height: 130px;
 		z-index: 100;
 	}
 		
@@ -883,6 +1099,59 @@ XL: 1200px +
 		border-bottom: 1px solid #1b1b1b;
 	}
 	
+	.whiteBar {
+		display: none;
+	}
+	
+	/* Adjustments to Defaults for Smaller Screens */
+	.hero .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.hero ul {
+		padding-left: 0;
+	}
+	
+	.filterBtn {
+		margin-top:	80px;
+	}
+	
+	.btnIcons {
+		position: relative;
+		text-align: center;
+	}
+	
+	.btnIcons > span {
+		position: absolute;
+		font-size: 10px;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 4%;
+	}
+	/* Positioning of Icons for Filters on Mobile */
+	.wheelchair,
+	.wheelchair:hover,
+	.wheelchair.selected,
+	.hearing,
+	.hearing:hover,
+	.hearing.selected,
+	.captioning,
+	.captioning:hover,
+	.captioning.selected,
+	.signing,
+	.signing:hover,
+	.signing.selected,
+	.autism,
+	.autism:hover,
+	.autism.selected,
+	.audio,
+	.audio:hover,
+	.audio.selected {
+		background-position: 50% 38%;
+	}
+	
 	.heroSmall {
 		height: auto;
 		padding-bottom: 50px;
@@ -891,6 +1160,27 @@ XL: 1200px +
 	.gridContent {
 		height: auto;
 	}
+	
+	.showTitle {
+		text-align: center;
+	}
+	
+	.socialBorder {
+		border-right: 0;
+		border-bottom: 1px solid #000;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.socialSharing {
+		text-align: center;
+	}
+	
+	.socialSharing > a {
+		display: inline-block;
+		margin: 20px;
+	}
+	
 	
 	/* Footer Styles */
 	footer .copyright {
@@ -938,10 +1228,21 @@ XL: 1200px +
 
 /* Md Devices, Landscape Tablet */
 @media only screen and (max-width: 991px) {
+	
+	/* Removes Horizontal Scroll Bars on small screens */
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	
 	.borderBottom {
 		padding-bottom: 30px;
 		margin-bottom: 30px;
 		border-bottom: 1px solid #101010;
+	}
+	
+	.rightSideLinks {
+		padding-right: 0px;
 	}
 	
 }
