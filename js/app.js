@@ -54,32 +54,29 @@ $(document).ready(function() {
 	});
 	
 	
-	function changeFont(fontSize) {
-      return function() {
-         $('html').css('font-size', fontSize + '%');
-         sessionStorage.setItem('fSize', fontSize);
-      }
-    }
-
-    var normalFont = changeFont(100),
-	mediumFont 	   = changeFont(115),
-	largeFont  	   = changeFont(125);
-
-    $('.js-font-decrease').on('click', function(){
-      normalFont();
-    });
-
-    $('.js-font-normal').on('click', function(){
-      mediumFont();
-    });
-
-    $('.js-font-increase').on('click', function(){
-      largeFont();
-    });
-
-    if (sessionStorage.length !== 0) {
-      $('html').css('font-size', sessionStorage.getItem('fSize') + '%');
-    };
+	// Increase/Decrease Font Size
+	$('#incfont').click(function() {
+		curSize = parseInt($('#content').css('font-size')) + 2;
+		if (curSize <= 20)
+			$('#content').css('font-size', curSize);
+	});
+	$('#decfont').click(function() {
+		curSize = parseInt($('#content').css('font-size')) - 2;
+		if (curSize >= 12)
+			$('#content').css('font-size', curSize);
+	});
 	
-	
+});
+
+$(document).ready(function() {
+  $('#incfont').click(function() {
+    curSize = parseInt($('#content').css('font-size')) + 2;
+    if (curSize <= 20)
+      $('#content').css('font-size', curSize);
+  });
+  $('#decfont').click(function() {
+    curSize = parseInt($('#content').css('font-size')) - 2;
+    if (curSize >= 12)
+      $('#content').css('font-size', curSize);
+  });
 });

@@ -21,7 +21,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+    <!-- Scripts for Dynamic Font Resizer -->
+    <script src="js/dw_event.js" type="text/javascript"></script>
+	<script src="js/dw_cookies.js" type="text/javascript"></script>
+	<script src="js/dw_sizerdx.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	// setDefaults arguments: size unit, default size, minimum, maximum
+	// optional array of elements or selectors to apply these defaults to
+	dw_fontSizerDX.setDefaults( "px", 12, 9, 26, ['body', 'td', 'div', 'p', 'font'] );
+	dw_Event.add( window, 'load', dw_fontSizerDX.init );
+	</script>
     <title>Theatre Access - New York City</title>
 </head>
 <body>
@@ -70,6 +79,10 @@
 				</div>
 		   	</div> <!-- /row -->
 		</div> <!-- /container -->
+		<!-- Dynamic Font Resizer -->
+		<div id="sizer" class="textControls"><img src="img/textSize.png" class="textSize" alt="Text Size Buttons"><a class="decrease" href="#" title="Decrease text size"><img src="img/minusText.png" alt="" border="0" /></a><a class="increase" href="#" title="Increase text size"><img src="img/plusText.png" alt="" border="0" /></a><a class="reset" href="#" title="Restore default font-sizes"><img src="img/reset.png" alt="" border="0" /></a>
+		</div>
+		
   	</div> <!-- /heroSmall -->
   	
  	<div class="howItWorks">

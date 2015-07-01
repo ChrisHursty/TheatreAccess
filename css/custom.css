@@ -26,25 +26,13 @@ Dark Red - #8a0d12
 body {
     background: #fff;
     font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 14px;
 	box-sizing: border-box;
 	width: 100%;
-	font-size: 100%;
 }
 
-
-p {
-  line-height: 1.5;
-}
-
-span {
-  cursor: pointer;
-}
-
-.js-font-decrease {
-  font-size: 75%;
-}
-.js-font-increase {
-  font-size: 125%;
+#content {
+	font-size: 14px;
 }
 
 .container-fluid {
@@ -308,12 +296,60 @@ a {
 }
 
 
-/*--- Hero - Header Section ---*/
+/*--- Hero - Home Page ---*/
 
 .hero {
     background-image: url(../img/heroBg.jpg);
 	background-size: cover;
 	min-height: 560px;
+}
+
+/*--- Hero - Inner Page ---*/
+.heroSmall {
+	position: relative;
+    background-image: url(../img/heroBg.jpg);
+	background-size: cover;
+	background-position: center bottom;
+	height: 350px;
+	padding: 100px 0 0;
+}
+
+.heroSmall h4 {
+	font-size: 34px;
+}
+
+/* Text Controls to increase/decrease font size */
+.textControls {
+	/* Structure */
+	position: absolute;
+	bottom: -18px;
+	right: 20%;
+	background-color: #464646;
+	height: auto;
+	width: 186px;
+	border-radius: 9px;
+	
+	/* Style */
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: 6px 12px;
+}
+
+.textSize {
+	margin-right: 6px;
+}
+
+.increase,
+.decrease,
+.reset {
+	padding: 6px 4px;
+	height: 24px;
+	width: 24px;
+	transition: all .3s ease-in-out;
 }
 
 /*-----------------------*/
@@ -736,18 +772,6 @@ footer .copyright {
 /*-------------------------------------*/
 /*-----------7. ABOUT PAGE ------------*/
 /*-------------------------------------*/
-
-.heroSmall {
-    background-image: url(../img/heroBg.jpg);
-	background-size: cover;
-	background-position: center bottom;
-	height: 350px;
-	padding: 100px 0 0;
-}
-
-.heroSmall h4 {
-	font-size: 34px;
-}
 
 .borderBottom img {
 	margin-top: 14px;
