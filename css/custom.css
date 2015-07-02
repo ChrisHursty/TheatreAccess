@@ -258,10 +258,17 @@ a {
 	color: #ffffff !important;
 }
 
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+	margin-left: auto;
+}
+
 .branding > a {
 	position: absolute;
 	top: -15px;
-	right: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 	width: 162px;
 	z-index: 100;
 	float: left;
@@ -275,7 +282,7 @@ a {
 .headerRight {
 	float: right;
 	display: block;
-	width: 42%;
+	
 	padding-top: 18px;
 	font-family: 'Open Sans';
 	font-style: italic;
@@ -287,13 +294,41 @@ a {
 
 .filterHeader,
 .filterHeaderRight {
+	position: relative;
 	padding-top: 18px;
-	padding-left: 10%;
+	text-align: center;
+}
+
+.filterHeader > .filterArrow {
+	position: absolute;
+	background-image: url(../img/filterArrow.png);
+	height: 25px;
+	width: 58px;
+	left: 48%;
+	bottom: -42px;
+}
+
+.filterHeaderRight > .filterArrow {
+	position: absolute;
+	background-image: url(../img/filterArrow.png);
+	height: 25px;
+	width: 58px;
+	right: 46%;
+	bottom: -42px;
 }
 
 .filterHeaderRight {
-	padding-left: 12%;
+	padding-left: 5%;
 }
+
+.howToFilters {
+	margin-right: 0;
+	margin-left: 0;
+	background: rgb(50, 50, 50);
+    background: rgba(50, 50, 50, .9);
+}
+
+
 
 
 /*--- Hero - Home Page ---*/
@@ -310,7 +345,8 @@ a {
     background-image: url(../img/heroBg.jpg);
 	background-size: cover;
 	background-position: center bottom;
-	height: 350px;
+	min-height: 350px;
+	height: auto;
 	padding: 100px 0 0;
 }
 
@@ -582,7 +618,8 @@ a {
 	margin-top: 63px;
 	border-radius: 8px;
 	background-color: #ffffff;
-	height: 326px
+	min-height: 326px;
+	height: auto;
 }
 
 #filterDates > li {
@@ -1062,10 +1099,6 @@ XL: 1200px +
 /* XS Devices, Landscape Phone & Down */
 @media only screen and (max-width: 460px) {
 	
-	.headerRight {
-		width: 70%;
-	}
-	
 	#navbar {
 		margin-top: 0;
 		width: 110%;
@@ -1074,8 +1107,22 @@ XL: 1200px +
 		text-align: right;
 		z-index: 50;
 	}
+	
 	.navbar-nav {
 		margin: 0px -15px;
+	}
+	
+	.headerRight {
+		width: 70%;
+	}
+	
+	.mobileNavBg {
+		padding-bottom: 8px;
+	}
+	
+	.headerRight p {
+		font-size: 10px;
+		letter-spacing: 0;
 	}
 	
 	/* Icons */
@@ -1106,13 +1153,19 @@ XL: 1200px +
 	}
 	
 	/* Header Adjustments for Mobile */
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+	
 	.branding > a {
 		position: absolute;
 		top: -15px;
 		left: -15px;
 		width: 140px;
+		margin-left: 0;
+		margin-right: 0;
 		height: 130px;
-		z-index: 100;
+		z-index: 100;	
 	}
 		
 	.navbar-nav {
@@ -1125,6 +1178,10 @@ XL: 1200px +
 	
 	.whiteBar {
 		display: none;
+	}
+	
+	.howToFilters {
+		margin-top: 40px;
 	}
 	
 	/* Adjustments to Defaults for Smaller Screens */
@@ -1174,6 +1231,11 @@ XL: 1200px +
 	.audio:hover,
 	.audio.selected {
 		background-position: 50% 38%;
+	}
+	
+	.filterResults {
+		clear: both;
+		margin: 35px 0;
 	}
 	
 	.heroSmall {
@@ -1231,6 +1293,11 @@ XL: 1200px +
 		width: 75%;
 	}
 	
+	.headerRight p {
+		font-size: 11px;
+		padding-bottom: 6px;
+	}
+	
 	.gridImg {
 		height: 140px;	
 	}
@@ -1258,7 +1325,7 @@ XL: 1200px +
 		margin-right: 0px;
 		margin-left: 0px;
 	}
-	
+		
 	.borderBottom {
 		padding-bottom: 30px;
 		margin-bottom: 30px;
@@ -1269,6 +1336,13 @@ XL: 1200px +
 		padding-right: 0px;
 	}
 	
+	.textControls {
+		right: 30px;
+	}
+	
+	.heroSmall {
+		padding: 100px 0 50px;
+	}
 }
 
 /* Md Devices, Landscape Tablet */
@@ -1285,8 +1359,66 @@ XL: 1200px +
 		padding: 15px 12px;
 	}
 	
-	.branding > a {
-		right: 38%;	
+	.whiteBar {
+		font-size: 14px;
+	}
+	
+	.headerRight p {
+		font-size: 10px;
+	}
+	
+	.filterCalendar {
+		margin-top: 26.5%;
+	}
+	
+	/* Change Filter Buttons from 3Up to 2Up*/
+	.filterBtn > .col-sm-4 {
+		width: 50%;
+	}
+	.filterBtn {
+		margin-top:	80px;
+	}
+	
+	.btnIcons {
+		position: relative;
+		text-align: center;
+	}
+	
+	.btnIcons > span {
+		position: absolute;
+		font-size: 8px;
+		word-wrap: break-word;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 4%;
+	}
+	/* Positioning of Icons for Filters on Mobile */
+	.wheelchair,
+	.wheelchair:hover,
+	.wheelchair.selected,
+	.hearing,
+	.hearing:hover,
+	.hearing.selected,
+	.captioning,
+	.captioning:hover,
+	.captioning.selected,
+	.signing,
+	.signing:hover,
+	.signing.selected,
+	.autism,
+	.autism:hover,
+	.autism.selected,
+	.audio,
+	.audio:hover,
+	.audio.selected {
+		background-position: 50% 38%;
+		background-size: 60%;
+	}
+	
+	.filterResults {
+		clear: both;
+		margin: 90px 15px 35px -15px;
 	}
 }
 
@@ -1297,8 +1429,9 @@ XL: 1200px +
 	
 	/* Increase Height of Grid on "How It Works" Page */
 	.gridContent {
-		height: 500px;
-	}	
+		min-height: 500px;
+		height: auto;
+	}
 }
 
 
@@ -1307,6 +1440,62 @@ XL: 1200px +
 	
 	#navbar {
 		width: 38%;
+	}
+	
+	/* Change Filter Buttons from 3Up to 2Up*/
+	.filterBtn > .col-sm-4 {
+		width: 50%;
+	}
+	
+	.filterCalendar {
+		margin-top: 20.7%;
+		border-radius: 8px;
+		background-color: #ffffff;
+		min-height: 326px;
+		height: auto;
+	}
+	
+	.filterBtn {
+		margin-top:	80px;
+	}
+	
+	.btnIcons {
+		position: relative;
+		text-align: center;
+	}
+	
+	.btnIcons > span {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 4%;
+	}
+	/* Positioning of Icons for Filters on Mobile */
+	.wheelchair,
+	.wheelchair:hover,
+	.wheelchair.selected,
+	.hearing,
+	.hearing:hover,
+	.hearing.selected,
+	.captioning,
+	.captioning:hover,
+	.captioning.selected,
+	.signing,
+	.signing:hover,
+	.signing.selected,
+	.autism,
+	.autism:hover,
+	.autism.selected,
+	.audio,
+	.audio:hover,
+	.audio.selected {
+		background-position: 50% 38%;	
+	}
+	
+	.filterResults {
+		clear: both;
+		margin: 90px auto 35px;
 	}
 }
 
