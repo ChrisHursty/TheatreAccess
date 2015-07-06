@@ -806,6 +806,52 @@ footer .copyright {
 }
 
 
+/* Date Picker/Range Picker Styles */
+
+#reportrange,
+#singledate {
+	background: #d22027;
+	float: left;
+	cursor: pointer;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	padding: 12px 24px;
+	border-radius: 8px;
+}
+
+#dateRange i,
+#singleDate i {
+	color: #d22027;
+	font-size: 32px;
+	line-height: 125%;
+	float: right;
+}
+
+#dateRange p,
+#singleDate p {
+	color: #272727;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	padding: 12px 24px;
+}
+
+#singleDate input {
+	background-color: transparent;
+	border: 0;
+}
+
+.range_inputs .btn-primary {
+	background-color: #d22027;
+	border: 0;
+}
+
+
 /*-------------------------------------*/
 /*-----------7. ABOUT PAGE ------------*/
 /*-------------------------------------*/
@@ -1431,6 +1477,11 @@ XL: 1200px +
 	.gridContent {
 		min-height: 500px;
 		height: auto;
+	}
+	
+	#reportrange,
+	#singledate {
+		width: 90%;
 	}
 }
 

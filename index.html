@@ -15,8 +15,15 @@
 	<link href="css/jquery.bxslider.css" rel="stylesheet" />
    	<!-- Isotope JS  -->  	
   	<script src="js/jquery.isotope.min.js"></script>
+  	<!-- Date Range Picker  -->
+<!--  	<script type="text/javascript" src="js/jquery.js"></script>-->
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+  	
    	<!-- Custom CSS  -->
-    <link rel="stylesheet" href="css/custom.css">   
+    <link rel="stylesheet" href="css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -122,17 +129,21 @@
     					</ul>
     					<div id="myTabContent" class="tab-content">
       						<div role="tabpanel" class="tab-pane fade active in" id="dateRange" aria-labelledby="home-tab">
-        						<div class="btn btn-default">
-        							Monday June 21, 2016
-        						</div>
-        						
-        						<div class="btn btn-default">
-        							Monday June 28, 2016
-        						</div>
+								<p>Please Select the Date Range:</p>
+        						<div id="reportrange" class="">
+									<span></span> <b class="caret"></b>
+
+								</div>
+     							<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
       						</div>
       						
       						<div role="tabpanel" class="tab-pane fade" id="singleDate" aria-labelledby="profile-tab">
-        						<p>There's some stuff gonna go here...</p>
+        						<p>Please Select a Date:</p>
+        						<div id="singledate" name="singledate">
+        						<input type="text" id="Date" name="singledate" />
+									<span></span> <b class="caret"></b>
+								</div>
+     							<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
       						</div>
     					</div><!-- /tab-content -->
   					</div><!-- /filterCalendar -->
@@ -156,7 +167,7 @@
  				<div class="col-xs-12 col-sm-4 showSingle wheelchairFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Aladdin on Broadway</h3>
@@ -177,7 +188,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow hearingFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/gentlemans-guide.jpg" alt="">
+							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
@@ -198,7 +209,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow captioningFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/jersey-boys.jpg" alt="" class="img-responsive">
+							<img src="../img/jersey-boys.jpg" alt="Cover Image or Photograph for the Jersey Boys Musical" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Jersey Boys</h3>
@@ -219,7 +230,7 @@
 				<div class="col-xs-12 col-sm-4 singleShow signingFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/cats.png" alt="" class="img-responsive">
+							<img src="../img/cats.png" alt="Cover Image or Photograph ofr the World Famous Broadway Show Cats" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Cats</h3>
@@ -240,7 +251,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow autismFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="">
+							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
@@ -261,7 +272,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow audioFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Aladdin on Broadway</h3>
@@ -282,7 +293,7 @@
 				<div class="col-xs-12 col-sm-4 showSingle wheelchairFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Aladdin on Broadway</h3>
@@ -303,7 +314,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow hearingFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/gentlemans-guide.jpg" alt="">
+							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
@@ -324,7 +335,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow captioningFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/jersey-boys.jpg" alt="" class="img-responsive">
+							<img src="../img/jersey-boys.jpg" alt="Cover Image or Photograph for the Jersey Boys Musical" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Jersey Boys</h3>
@@ -345,7 +356,7 @@
 				<div class="col-xs-12 col-sm-4 singleShow signingFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/cats.png" alt="" class="img-responsive">
+							<img src="../img/cats.png" alt="Cover Image or Photograph ofr the World Famous Broadway Show Cats" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Cats</h3>
@@ -366,7 +377,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow autismFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="">
+							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">A GENTLEMAN’S GUIDE TO LOVE AND MURDER</h3>
@@ -387,7 +398,7 @@
  				<div class="col-xs-12 col-sm-4 singleShow audioFilter">
 					<div class="mediaBlock">
 						<div class="showImg">
-							<img src="../img/aladdin.jpg" alt="" class="img-responsive">
+							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">
 						</div>
 						<div class="showInfo">
 							<h3 class="showTitle">Aladdin on Broadway</h3>
@@ -415,8 +426,8 @@
    					<h4>Theatre Access NYC</h4>
    					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
    					<h4>A Service Of</h4>
-   					<img src="img/tdfFooter.png" alt="Theatre Development Fund">
-   					<img src="img/tblFooter.png" alt="The Broadway League">
+   					<img src="img/tdfFooter.png" alt="Theatre Development Fund Logo">
+   					<img src="img/tblFooter.png" alt="The Broadway League Logo">
    				</div>
    				<div class="col-sm-6 rightFooter">
    					<p class="copyright">© 2015 ALL RIGHTS RESERVED.<br />DESIGN &amp; DEVELOPMENT BY INFLEXION INTERACTIVE</p>
