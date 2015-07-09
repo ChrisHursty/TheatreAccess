@@ -113,36 +113,47 @@
 					</nav>
 				</div>
 				<div class="col-xs-12 col-sm-6">
-					<div class="filterCalendar">
+					<div class="filterCalendar" role="tabpanel" data-example-id="togglable-tabs">
+    					<ul id="filterDates" class="nav nav-tabs" role="tablist">
+      						<li role="presentation" class="datePicker active">
+      							<a href="#dateRange" id="dateRange-tab" role="tab" data-toggle="tab" aria-controls="dateRange" aria-expanded="true">
+      								View Date Range
+      							</a>
+      						</li>
+      						
+      						<li role="presentation" class="singleDate">
+      							<a href="#singleDate" role="tab" id="singleDate-tab" data-toggle="tab" aria-controls="singleDate" aria-expanded="false">
+      								View Single Date
+      							</a>
+      						</li>
+    					</ul>
+    					<div id="myTabContent" class="tab-content">
+      						<div role="tabpanel" class="tab-pane fade active in" id="dateRange" aria-labelledby="home-tab">
+								<p>Please Select the Date Range:</p>
+        						<div id="reportrange" class="">
+									<span></span> <b class="caret"></b>
 
-						<div class="row clearfix">
-						
-							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn today">Today</button>
-							</div>
-							
-							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn tomorrow">Tomorrow</button>
-							</div>
-							
-							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn nextSeven">Next 7 Days</button>
-							</div>
-							
-							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn nextThirty">Next 30 Days</button>
-							</div>
-							
-							<button class="btn btn-default dateCustom">Custom</button>
-							<button class="btn btn-default viewCalendar">View Calendar</button>
-						</div>
-						
+								</div>
+     							<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+     							<a class="btn searchShows">Search Shows</a>
+      						</div>
+      						
+      						<div role="tabpanel" class="tab-pane fade" id="singleDate" aria-labelledby="profile-tab">
+        						<p>Please Select a Date:</p>
+        						<div id="singledate" name="singledate">
+        						<input type="text" id="Date" name="singledate" />
+									<span></span> <b class="caret"></b>
+								</div>
+     							<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+     							<a class="btn searchShows">Search Shows</a>
+      						</div>
+    					</div><!-- /tab-content -->
   					</div><!-- /filterCalendar -->
 				</div> <!-- /col-sm-6 -->
 
 	   			
 				<div class="container">
-
+				<!--<button class="btn btn-default filterButton rectangleBtn">Click To Filter Shows</button>-->
 					<div class="row filterResults">
 						Now displaying <span>12</span> out of 35 shows
 					</div>

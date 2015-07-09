@@ -1,13 +1,6 @@
-
-$(document).ready(function() {
-	
-	// Single Show Slider
-	$('.bxslider').bxSlider({
-		pager: false
-	});
-	
-	
-	// Isotope Filter, Home Page
+// Use (window).load so images in Isotope load first, then the grid
+$(window).load(function(){
+    // Isotope Filter, Home Page
 	var $container = $('.shows'); 
     $container.isotope({ 
         filter: '*', 
@@ -45,6 +38,58 @@ $(document).ready(function() {
 	   var $optionSet = $this.parents('nav ul.filterBtn'); 
 	   $optionSet.find('.selected').removeClass('selected'); 
 	   $this.addClass('selected');  
+	});
+	
+//	function getComboFilter( filters ) {
+//		var i = 0;
+//		var comboFilters = [];
+//		var message = [];
+//		for ( var prop in filters ) {
+//			message.push( filters[ prop ].join(' ') );
+//            var filterGroup = filters[ prop ];
+//            // skip to next filter group if it doesn't have any values
+//            if ( !filterGroup.length ) {
+//                continue;
+//            }
+//            if ( i === 0 ) {
+//                // copy to new array
+//                comboFilters = filterGroup.slice(0);
+//            }
+//            else {
+//				var filterSelectors = [];
+//                // copy to fresh array
+//				var groupCombo = comboFilters.slice(0); // [ A, B ]
+//				// merge filter Groups
+//				for (var k=0, len3 = filterGroup.length; k < len3; k++) {
+//					for (var j=0, len2 = groupCombo.length; j < len2; j++) {
+//						filterSelectors.push( groupCombo[j] + filterGroup[k] ); // [ 1, 2 ]
+//					}
+//				}
+//				// apply filter selectors to combo filters for next group
+//				comboFilters = filterSelectors;
+//            }
+//			i++;
+//		}
+//		comboFilters.sort();
+//        var comboFilter = comboFilters.join(', ');
+//		return comboFilter;
+//	}
+//	function clearAll(){
+//		$('a.active').trigger('click');
+//		$('#filter-display').empty();
+//		var numItemsDisp = $('img.item:not(.isotope-hidden)').length;
+//		$('#filter-display').append( '<span class="filter-label data-counter pull-right">Displaying all&nbsp;'+numItemsDisp+'&nbsp;artworks</span>' );
+//	}
+
+})
+
+
+// DOM Ready
+$(document).ready(function() {
+	
+	// Single Show Slider
+	$('.bxslider').bxSlider({
+		pager: false
 	});
 	
 	
@@ -89,11 +134,9 @@ $(document).ready(function() {
         timePicker12Hour: true,
         ranges: {
            'Today': [moment(), moment()],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+           'Tomorrow': [moment().add(1, 'days'), moment().add(1, 'days')],
+           'Next 7 Days': [moment().add(6, 'days'), moment()],
+           'Next 30 Days': [moment().add(29, 'days'), moment()]
         },
         opens: 'left',
         drops: 'down',
@@ -125,6 +168,7 @@ $(document).ready(function() {
 	});
 	
 	$('#Date').val(new Date().toDateInputValue());
+	//$('#Date').moment().format("MMM Do YY");
 	//$('#Date').html(moment().format('MMMM D, YYYY') );
 });
 

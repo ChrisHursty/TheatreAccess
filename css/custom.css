@@ -373,6 +373,7 @@ a {
 	font-weight: 700;
 	letter-spacing: 1px;
 	padding: 6px 12px;
+	z-index: 100;
 }
 
 .textSize {
@@ -411,15 +412,16 @@ a {
 }
 
 .btnIcons {
+	position: relative;
 	padding-top: 82%;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
 	font-weight: 700;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	text-align: center;
 	text-shadow: none;
-	border: 1px solid #ffffff;
+	border: transparent;
 	border-radius: 8px;
 	background-repeat: no-repeat;
 	-webkit-transition: background 0.3s ease-in-out;
@@ -431,7 +433,7 @@ a {
 .btnIcons:hover,
 .btnIcons.selected {
 	color: #ffffff;
-	border: 1px solid #ffffff;
+
 }
 
 .wheelchair {
@@ -491,21 +493,39 @@ a {
 
 .audio {
 	background-image: url(../img/icon-audioGrey.png);
-	background-position: 12px 38px;
+	background-position: 10px 38px;
 }
 
 .audio:hover,
 .audio.selected {
 	background-image: url(../img/icon-audio.png);
-	background-position: 12px 42px;
+	background-position: 10px 42px;
 }
 
+/* Filter Reset Button */
+.isotope-reset {
+	position: absolute;
+	right: -242%;
+	top: 18px;
+	padding: 8px 24px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-align: center;
+	text-shadow: none;
+	background-color: #212121;
+	border: 1px solid #fff;
+	color: #fff;
+}
 
 /*-----------------------*/
 /*----5. Small Icons ----*/
 /*-----------------------*/
 
 .iconsContainer {
+	
 	width: 100%;
 	display: block;
 	float: left;
@@ -613,14 +633,16 @@ a {
 
 
 /*--- Filter Calendar with Date Picker ---*/
-
+/* Old Style
 .filterCalendar {
-	margin-top: 63px;
+	margin-top: 62px;
 	border-radius: 8px;
 	background-color: #ffffff;
-	min-height: 326px;
+	min-height: 324px;
 	height: auto;
+	padding: 60px 15px;
 }
+
 
 #filterDates > li {
 	width: 50%;
@@ -672,11 +694,12 @@ a {
 .tab-pane {
 	padding: 20px;
 }
+*/
 
 /*.filterButton,*/
 .filterResults {
 	display: block;
-	margin: 90px auto 0;
+	margin: 94px auto 0;
 	padding: 12px 36px;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -810,6 +833,7 @@ footer .copyright {
 
 #reportrange,
 #singledate {
+	position: relative;
 	background: #d22027;
 	float: left;
 	cursor: pointer;
@@ -841,6 +865,12 @@ footer .copyright {
 	padding: 12px 24px;
 }
 
+#Date {
+	cursor: pointer;
+	display: block;
+	float: left;
+}
+
 #singleDate input {
 	background-color: transparent;
 	border: 0;
@@ -851,6 +881,110 @@ footer .copyright {
 	border: 0;
 }
 
+.searchShows {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 260px;
+	width: 200px;
+	background: #212121;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 8px auto;
+	border-radius: 8px;
+}
+
+
+/* New Calendar 2.0 */
+
+.filterCalendar {
+	margin-top: 62px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	min-height: 324px;
+	height: auto;
+	padding: 70px 30px 0;
+}
+
+.dateBtn {
+	width: 100%;
+	text-align: center;
+	background: #f5f6f6;
+	cursor: pointer;
+	color: #313131;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 6px;
+	border-radius: 8px;
+	border: 0px;
+	
+	-webkit-transition: background 0.3s ease-in-out;
+  	-moz-transition: background 0.3s ease-in-out;
+  	-o-transition: background 0.3s ease-in-out;
+  	transition: background 0.3s ease-in-out;
+}
+
+.dateBtn:hover {
+	background: #d22027;
+	color: #ffffff;
+}
+
+
+.dateCustom {
+	width: 95%;
+	margin: 5% 15px 0;
+	text-align: center;
+	background: #d22027;
+	cursor: pointer;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-style: normal;
+	padding: 8px;
+	border-radius: 8px;
+	border: 0px;
+	
+	-webkit-transition: background 0.3s ease-in-out;
+  	-moz-transition: background 0.3s ease-in-out;
+  	-o-transition: background 0.3s ease-in-out;
+  	transition: background 0.3s ease-in-out;
+}
+
+.viewCalendar {
+	width: 95%;
+	margin: 5% 15px;
+	text-align: center;
+	background: #f5f6f6;
+	cursor: pointer;
+	color: #313131;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-style: normal;
+	padding: 8px;
+	border-radius: 8px;
+	border: 0px;
+	
+	-webkit-transition: background 0.3s ease-in-out;
+  	-moz-transition: background 0.3s ease-in-out;
+  	-o-transition: background 0.3s ease-in-out;
+  	transition: background 0.3s ease-in-out;
+}
+
+.viewCalendar > img {
+	margin-right: 22px;
+}
 
 /*-------------------------------------*/
 /*-----------7. ABOUT PAGE ------------*/
@@ -1121,13 +1255,6 @@ aside {
         transition-property:         transform, opacity; 
 }
 
-.isotopw-reset {
-	background-color: dodgerblue;
-	display: block;
-	float: left;
-	
-}
-
 
 /*-------------------------------------*/
 /*---------12. Media Queries ----------*/
@@ -1144,6 +1271,10 @@ XL: 1200px +
 
 /* XS Devices, Landscape Phone & Down */
 @media only screen and (max-width: 460px) {
+	
+	.heroSmall h4 {
+		font-size: 24px;
+	}
 	
 	#navbar {
 		margin-top: 0;
@@ -1171,13 +1302,35 @@ XL: 1200px +
 		letter-spacing: 0;
 	}
 	
+	.howToFilters {
+		margin-top: 10px;
+	}
+	
+	#reportrange,
+	#singledate {
+		font-size: 8px;
+	}
+	
 	/* Icons */
+	.btnIcons > span {
+		font-size: 8px;
+	}
+	
 	.gridImg > img {
 		max-width: 40%;
 	}
 
 	.wideIcon > img {
 		max-width: 50%;
+	}
+	
+	.rectangleBtn {
+		font-size: 12px;
+		padding: 6px 16px;
+	}
+	
+	.leftFooter img {
+		margin: 8px 0;
 	}
 
 }
@@ -1226,8 +1379,9 @@ XL: 1200px +
 		display: none;
 	}
 	
-	.howToFilters {
-		margin-top: 40px;
+	.isotope-reset {
+		position: relative;
+		right: 0;
 	}
 	
 	/* Adjustments to Defaults for Smaller Screens */
@@ -1245,18 +1399,19 @@ XL: 1200px +
 	}
 	
 	.btnIcons {
+		word-wrap: break-word;
 		position: relative;
 		text-align: center;
 	}
 	
 	.btnIcons > span {
 		position: absolute;
-		font-size: 10px;
 		width: 100%;
 		left: 0;
 		right: 0;
 		bottom: 4%;
 	}
+	
 	/* Positioning of Icons for Filters on Mobile */
 	.wheelchair,
 	.wheelchair:hover,
@@ -1294,6 +1449,10 @@ XL: 1200px +
 	}
 	
 	.showTitle {
+		text-align: center;
+	}
+	
+	.homeLink {
 		text-align: center;
 	}
 	
@@ -1349,7 +1508,7 @@ XL: 1200px +
 	}
 	
 	.wideIcon {
-		height: 160px;	
+		height: 160px;
 	}
 	
 	/* Icons */
@@ -1360,6 +1519,12 @@ XL: 1200px +
 	.wideIcon > img {
 		max-width: 30%;
 	}
+	
+	.mediaBlock {
+		max-width: 70%;
+		margin: 6px auto;
+	}
+
 }
 
 
@@ -1388,6 +1553,16 @@ XL: 1200px +
 	
 	.heroSmall {
 		padding: 100px 0 50px;
+	}
+	
+	.pagination a {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 10px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0;
+		color: #fff;
+		transition: color 0.3s linear;
 	}
 }
 
@@ -1425,6 +1600,10 @@ XL: 1200px +
 		margin-top:	80px;
 	}
 	
+	.searchShows {
+		top: 320px;
+	}
+	
 	.btnIcons {
 		position: relative;
 		text-align: center;
@@ -1438,6 +1617,10 @@ XL: 1200px +
 		left: 0;
 		right: 0;
 		bottom: 4%;
+	}
+	.isotope-reset {
+		top: -100px;
+		right: -290%;
 	}
 	/* Positioning of Icons for Filters on Mobile */
 	.wheelchair,
@@ -1522,6 +1705,12 @@ XL: 1200px +
 		right: 0;
 		bottom: 4%;
 	}
+	
+	.isotope-reset {
+		top: -160px;
+		right: -244%;
+	}
+	
 	/* Positioning of Icons for Filters on Mobile */
 	.wheelchair,
 	.wheelchair:hover,
