@@ -16,12 +16,10 @@
    	<!-- Isotope JS  -->  	
   	<script src="js/jquery.isotope.min.js"></script>
   	<!-- Date Range Picker  -->
-<!--  	<script type="text/javascript" src="js/jquery.js"></script>-->
-	<script type="text/javascript" src="js/moment.js"></script>
-	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<link rel="stylesheet" href="css/daterangepicker.css" />
+	<script src="js/moment.min.js"></script>
+	<script src="js/jquery.daterangepicker.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
-  	
    	<!-- Custom CSS  -->
     <link rel="stylesheet" href="css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -84,17 +82,7 @@
 		</div>	
 	</div>
 	
-	<div class="howToFilters">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-				<h5 class="uppercase white centerText">How to Use Filters</h5>
-					<p class="justifyText white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, sunt tempore facere cupiditate! Ipsa vero consequatur, dolorem placeat, officiis deserunt esse inventore quos odio dolore, temporibus aut blanditiis quaerat incidunt.</p>
-				</div>
-			</div> <!-- /row -->
-			
-		</div> <!-- /container -->
-	</div> <!-- /howToFilters -->
+	
 	
   	<div class="hero">
 		<div class="container">
@@ -114,27 +102,27 @@
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<div class="filterCalendar">
-
+						<div class="header">How Soon Are You Looking To Attend?</div>
 						<div class="row clearfix">
 						
 							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn today">Today</button>
+								<a class="btn btn-default dateBtn today" data-filter=".dateToday">Today</a>
 							</div>
 							
 							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn tomorrow">Tomorrow</button>
+								<a class="btn btn-default dateBtn tomorrow" data-filter=".dateTomorrow">Tomorrow</a>
 							</div>
 							
 							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn nextSeven">Next 7 Days</button>
+								<a class="btn btn-default dateBtn nextSeven" data-filter=".dateNextSeven">Next 7 Days</a>
 							</div>
 							
 							<div class="col-xs-12 col-sm-3">
-								<button class="btn btn-default dateBtn nextThirty">Next 30 Days</button>
+								<a class="btn btn-default dateBtn nextThirty" data-filter=".dateNextThirty">Next 30 Days</a>
 							</div>
 							
-							<button class="btn btn-default dateCustom">Custom</button>
-							<button class="btn btn-default viewCalendar">View Calendar</button>
+							<button id="customBtn" class="btn btn-default dateCustom">Custom</button>
+							<button id="customCalendar" class="btn btn-default viewCalendar"><img src="img/icon-calendar.png" alt="Small Icon Image of a Calendar" >View Calendar</button>
 						</div>
 						
   					</div><!-- /filterCalendar -->
@@ -155,7 +143,7 @@
  	<div class="homeContent">
  		<div class="container">
  			<div class="row contentArea shows">
- 				<div class="col-xs-12 col-sm-4 showSingle audioFilter wheelchairFilter">
+ 				<div class="col-xs-12 col-sm-4 showSingle audioFilter wheelchairFilter dateToday">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">
@@ -176,7 +164,7 @@
 					</div>
 				</div> <!-- /col-sm-4 col-xs-12 --> 
 				
- 				<div class="col-xs-12 col-sm-4 singleShow hearingFilter">
+ 				<div class="col-xs-12 col-sm-4 singleShow hearingFilter dateTomorrow dateNextSeven dateNextThirty">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
@@ -197,7 +185,7 @@
 					</div>
 				</div> <!-- /col-sm-4 col-xs-12 -->
 				 
- 				<div class="col-xs-12 col-sm-4 singleShow audioFilter captioningFilter">
+ 				<div class="col-xs-12 col-sm-4 singleShow audioFilter captioningFilter dateNextSeven dateNextThirty">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/jersey-boys.jpg" alt="Cover Image or Photograph for the Jersey Boys Musical" class="img-responsive">
@@ -218,7 +206,7 @@
 					</div>
 				</div> <!-- /col-sm-4 col-xs-12 -->
 	
-				<div class="col-xs-12 col-sm-4 singleShow wheelchairFilter signingFilter">
+				<div class="col-xs-12 col-sm-4 singleShow wheelchairFilter signingFilter dateToday dateNextSeven dateNextThirty">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/cats.png" alt="Cover Image or Photograph ofr the World Famous Broadway Show Cats" class="img-responsive">
@@ -239,7 +227,7 @@
 					</div>
 				</div> <!-- /col-sm-4 col-xs-12 --> 
 				
- 				<div class="col-xs-12 col-sm-4 singleShow autismFilter signingFilter">
+ 				<div class="col-xs-12 col-sm-4 singleShow autismFilter signingFilter dateTomorrow dateNextSeven dateNextThirty">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/gentlemans-guide.jpg" alt="Cover Image or Photograph for the show called a gentleman's guide to love and murder" class="img-responsive">
@@ -260,7 +248,7 @@
 					</div>
 				</div> <!-- /col-sm-4 col-xs-12 -->
 				
- 				<div class="col-xs-12 col-sm-4 singleShow wheelchairFilter audioFilter">
+ 				<div class="col-xs-12 col-sm-4 singleShow wheelchairFilter audioFilter dateToday dateTomorrow dateNextSeven dateNextThirty">
 					<div class="mediaBlock">
 						<div class="showImg">
 							<img src="../img/aladdin.jpg" alt="Cover Image or Photograph for the Aladdin on Broadway Show" class="img-responsive">

@@ -1,6 +1,6 @@
 // Use (window).load so images in Isotope load first, then the grid
 $(window).load(function(){
-    // Isotope Filter, Home Page
+    // Isotope Filter - Home Page - Filter By Accessibilty
 	var $container = $('.shows'); 
     $container.isotope({ 
         filter: '*', 
@@ -40,6 +40,49 @@ $(window).load(function(){
 	   $this.addClass('selected');  
 	});
 	
+	
+	
+	// Isotope Filter - Home Page - Filter By Date/Range
+	var $container = $('.shows'); 
+    $container.isotope({ 
+        filter: '*', 
+        animationOptions: { 
+            duration: 750, 
+            easing: 'linear', 
+            queue: false, 
+        } 
+    });
+  
+    $('.filterCalendar .row .col-xs-12 a').click(function(){ 
+        var selector = $(this).attr('data-filter'); 
+        $container.isotope({ 
+            filter: selector, 
+            animationOptions: { 
+                duration: 750, 
+                easing: 'linear', 
+                queue: false, 
+            } 
+        }); 
+      return false; 
+    });
+
+	
+	// Active/Selected State for Filters
+	var $optionSets = $('.filterCalendar .row .col-xs-12'), 
+		   $optionLinks = $optionSets.find('a'); 
+
+		   $optionLinks.click(function(){ 
+			  var $this = $(this); 
+		  // don't proceed if already selected 
+		  if ( $this.hasClass('selected') ) { 
+			  return false; 
+		  } 
+	   var $optionSet = $this.parents('.filterCalendar .row .col-xs-12'); 
+	   $optionSet.find('.selected').removeClass('selected'); 
+	   $this.addClass('selected');  
+	});
+	
+	// Select Multiple Accessibility Filters
 //	function getComboFilter( filters ) {
 //		var i = 0;
 //		var comboFilters = [];
@@ -106,70 +149,74 @@ $(document).ready(function() {
 	});
 	
 	
-	// Date Range Picker
-	$('input[name="daterange"]').daterangepicker();
 	
+//	$('#date-range9').dateRangePicker({
+//		autoClose: false,
+//		format: 'YYYY-MM-DD',
+//		separator: ' to ',
+//		language: 'auto',
+//		startOfWeek: 'sunday',// or monday
+//		getValue: function()
+//		{
+//			return $(this).val();
+//		},
+//		setValue: function(s)
+//		{
+//			if(!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val())
+//			{
+//				$(this).val(s);
+//			}
+//		},
+//		startDate: false,
+//		endDate: false,
+//		time: {
+//			enabled: false
+//		},
+//		minDays: 0,
+//		maxDays: 0,
+//		showShortcuts: true,
+//		shortcuts:
+//		{
+//			//'prev-days': [1,3,5,7],
+//			'next-days': [3,5,7],
+//			//'prev' : ['week','month','year'],
+//			'next' : ['week','month','year']
+//		},
+//		customShortcuts : [],
+//		inline:false,
+//		container:'body',
+//		alwaysOpen:false,
+//		singleDate:false,
+//		lookBehind: false,
+//		batchMode: false,
+//		duration: 200,
+//		stickyMonths: false,
+//		dayDivAttrs: [],
+//		dayTdAttrs: [],
+//		applyBtnClass: '',
+//		singleMonth: 'auto',
+//		hoveringTooltip: function(days)
+//		{
+//			return days > 1 ? days + ' days' : '';
+//		},
+//		showTopbar: true
+//	});
 	
-	// Single Date Picker
-	$('input[name="singledate"]').daterangepicker({
-		singleDatePicker: true,
-		showDropdowns: true
+	// Custom Date Picker
+	$('#customBtn').dateRangePicker({
+		showShortcuts: false,
+		format: 'YYYY-MM-DD'
+	}).bind('datepicker-change', function(evt, obj) {
+		alert('date1: ' + obj.date1 + ' / date2: ' + obj.date2);
+	});
+	
+	// View Calendar
+	$('#customCalendar').dateRangePicker({
+		autoClose: true,
+		singleDate : true,
+		showShortcuts: false
 	});
 
-	
-	// All Options
-	$('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
- 
-    $('#reportrange').daterangepicker({
-        format: 'MM/DD/YYYY',
-        startDate: moment().subtract(29, 'days'),
-        endDate: moment(),
-        minDate: '01/01/2012',
-        maxDate: '12/31/2015',
-        dateLimit: { days: 60 },
-        showDropdowns: true,
-        showWeekNumbers: true,
-        timePicker: false,
-        timePickerIncrement: 1,
-        timePicker12Hour: true,
-        ranges: {
-           'Today': [moment(), moment()],
-           'Tomorrow': [moment().add(1, 'days'), moment().add(1, 'days')],
-           'Next 7 Days': [moment().add(6, 'days'), moment()],
-           'Next 30 Days': [moment().add(29, 'days'), moment()]
-        },
-        opens: 'left',
-        drops: 'down',
-        buttonClasses: ['btn', 'btn-sm'],
-        applyClass: 'btn-primary',
-        cancelClass: 'btn-default',
-        separator: ' to ',
-        locale: {
-            applyLabel: 'Submit',
-            cancelLabel: 'Cancel',
-            fromLabel: 'From',
-            toLabel: 'To',
-            customRangeLabel: 'Custom',
-            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            firstDay: 1
-        }
-    }, function(start, end, label) {
-        console.log(start.toISOString(), end.toISOString(), label);
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    });
-	
-	
-	// Display Today's Date
-	Date.prototype.toDateInputValue = (function() {
-		var local = new Date(this);
-		local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-		return local.toJSON().slice(0,10);
-	});
-	
-	$('#Date').val(new Date().toDateInputValue());
-	//$('#Date').moment().format("MMM Do YY");
-	//$('#Date').html(moment().format('MMMM D, YYYY') );
 });
 
 
