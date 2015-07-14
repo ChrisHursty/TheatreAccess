@@ -1,6 +1,9 @@
 // Use (window).load so images in Isotope load first, then the grid
 $(window).load(function(){
+	
+	/*****************************************************/
     // Isotope Filter - Home Page - Filter By Accessibilty
+	/*****************************************************/
 	var $container = $('.shows'); 
     $container.isotope({ 
         filter: '*', 
@@ -41,8 +44,9 @@ $(window).load(function(){
 	});
 	
 	
-	
+	/***************************************************/
 	// Isotope Filter - Home Page - Filter By Date/Range
+	/***************************************************/
 	var $container = $('.shows'); 
     $container.isotope({ 
         filter: '*', 
@@ -149,73 +153,28 @@ $(document).ready(function() {
 	});
 	
 	
-	
-//	$('#date-range9').dateRangePicker({
-//		autoClose: false,
-//		format: 'YYYY-MM-DD',
-//		separator: ' to ',
-//		language: 'auto',
-//		startOfWeek: 'sunday',// or monday
-//		getValue: function()
-//		{
-//			return $(this).val();
-//		},
-//		setValue: function(s)
-//		{
-//			if(!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val())
-//			{
-//				$(this).val(s);
-//			}
-//		},
-//		startDate: false,
-//		endDate: false,
-//		time: {
-//			enabled: false
-//		},
-//		minDays: 0,
-//		maxDays: 0,
-//		showShortcuts: true,
-//		shortcuts:
-//		{
-//			//'prev-days': [1,3,5,7],
-//			'next-days': [3,5,7],
-//			//'prev' : ['week','month','year'],
-//			'next' : ['week','month','year']
-//		},
-//		customShortcuts : [],
-//		inline:false,
-//		container:'body',
-//		alwaysOpen:false,
-//		singleDate:false,
-//		lookBehind: false,
-//		batchMode: false,
-//		duration: 200,
-//		stickyMonths: false,
-//		dayDivAttrs: [],
-//		dayTdAttrs: [],
-//		applyBtnClass: '',
-//		singleMonth: 'auto',
-//		hoveringTooltip: function(days)
-//		{
-//			return days > 1 ? days + ' days' : '';
-//		},
-//		showTopbar: true
-//	});
-	
-	// Custom Date Picker
-	$('#customBtn').dateRangePicker({
-		showShortcuts: false,
-		format: 'YYYY-MM-DD'
-	}).bind('datepicker-change', function(evt, obj) {
-		alert('date1: ' + obj.date1 + ' / date2: ' + obj.date2);
+	$(function () {
+
+		$('.toggle').click(function (event) {
+			event.preventDefault();
+			var target = $(this).attr('href');
+			$(target).toggleClass('hidden show');
+		});
+
+	});
+
+	// Custom Date  Range Picker	
+	$('#datepicker-start').Zebra_DatePicker({
+	  direction: true,
+	  pair: $('#datepicker-end')
 	});
 	
-	// View Calendar
-	$('#customCalendar').dateRangePicker({
-		autoClose: true,
-		singleDate : true,
-		showShortcuts: false
+	$('#datepicker-end').Zebra_DatePicker({
+	  direction: 1
 	});
+ 
+	// Show Calender
+	$('#customCalendar').Zebra_DatePicker();
 
 });
 
