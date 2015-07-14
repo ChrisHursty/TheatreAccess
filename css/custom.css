@@ -932,7 +932,7 @@ footer .copyright {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
-	padding: 6px;
+	padding: 10px 6px;
 	margin: 7.5px;
 	border-radius: 8px;
 	border: 0px;
@@ -1011,7 +1011,7 @@ footer .copyright {
 
 .dateCustom {
 	width: 95%;
-	margin: 5% 15px 0;
+	margin: 7.5% 15px 0;
 	text-align: center;
 	background: #d22027;
 	cursor: pointer;
@@ -1021,7 +1021,7 @@ footer .copyright {
 	font-size: 12px;
 	letter-spacing: 1px;
 	font-style: normal;
-	padding: 10px;
+	padding: 12px;
 	border-radius: 8px;
 	border: 0px;
 	
@@ -1029,49 +1029,6 @@ footer .copyright {
   	-moz-transition: background 0.3s ease-in-out;
   	-o-transition: background 0.3s ease-in-out;
   	transition: background 0.3s ease-in-out;
-}
-
-.viewCalendar {
-	width: 95%;
-	margin: 5% 15px;
-	text-align: center;
-	background: #f5f6f6;
-	cursor: pointer;
-	color: #313131;
-	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
-	letter-spacing: 1px;
-	font-style: normal;
-	border-radius: 8px;
-	border: 0px;
-	
-	-webkit-transition: background 0.3s ease-in-out;
-  	-moz-transition: background 0.3s ease-in-out;
-  	-o-transition: background 0.3s ease-in-out;
-  	transition: background 0.3s ease-in-out;
-}
-
-#customCalendar {
-	display: block;
-	width: inherit;
-	height: inherit;
-	background-color: transparent;
-	text-align: center;
-	cursor: pointer;
-	color: #313131;
-	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
-	letter-spacing: 1px;
-	font-style: normal;
-	border: 0px;
-	padding: 4px;
-	margin-left: 30px;
-}
-
-.viewCalendar > img {
-	margin-right: 22px;
 }
 
 
