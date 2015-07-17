@@ -305,7 +305,7 @@ a {
 	height: 25px;
 	width: 58px;
 	left: 48%;
-	bottom: -42px;
+	bottom: -40px;
 }
 
 .filterHeaderRight > .filterArrow {
@@ -314,7 +314,7 @@ a {
 	height: 25px;
 	width: 58px;
 	right: 46%;
-	bottom: -42px;
+	bottom: -40px;
 }
 
 .filterHeaderRight {
@@ -350,6 +350,11 @@ a {
 	padding: 100px 0 0;
 }
 
+/*--- Hero - 0px Height but still needed for relative postioning and 'text size controls' ---*/
+.heroSmallest {
+	position: relative;
+}
+
 .heroSmall h4 {
 	font-size: 34px;
 }
@@ -358,7 +363,7 @@ a {
 .textControls {
 	/* Structure */
 	position: absolute;
-	bottom: -18px;
+	bottom: -56px;
 	right: 20%;
 	background-color: #464646;
 	height: auto;
@@ -547,7 +552,7 @@ a {
   	transition: background 0.3s ease-in-out;
 }
 
-.filterIcons:hover {
+.filterIcons.selected {
 	background: #d22027;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -565,7 +570,7 @@ a {
 	background-position: 40% 50%;
 }
 
-.wheelchairSmall:hover {
+.wheelchairSmall.selected {
 	background-image: url(../img/icon-wheelchair.png);
 	background-size: 60% 80%;
 	background-position: 40% 35%;
@@ -577,7 +582,7 @@ a {
 	background-position: 50% 40%;
 }
 
-.hearingSmall:hover {
+.hearingSmall.selected {
 	background-image: url(../img/icon-hearing.png);
 	background-size: 60% 80%;
 	background-position: 50% 25%;
@@ -589,7 +594,7 @@ a {
 	background-position: 40% 50%;
 }
 
-.captioningSmall:hover {
+.captioningSmall.selected {
 	background-image: url(../img/icon-captioning.png);
 	background-size: 70% 70%;
 	background-position: 40% 35%;
@@ -601,7 +606,7 @@ a {
 	background-position: 50% 40%;
 }
 
-.signingSmall:hover {
+.signingSmall.selected {
 	background-image: url(../img/icon-signing.png);
 	background-size: 80% 80%;
 	background-position: 50% 25%;
@@ -613,7 +618,7 @@ a {
 	background-position: 50% 40%;
 }
 
-.autismSmall:hover {
+.autismSmall.selected {
 	background-image: url(../img/icon-autism.png);
 	background-size: 60% 70%;
 	background-position: 50% 25%;
@@ -625,7 +630,7 @@ a {
 	background-position: 50% 50%;
 }
 
-.audioSmall:hover {
+.audioSmall.selected {
 	background-image: url(../img/icon-audio.png);
 	background-size: 80% 60%;
 	background-position: 50% 35%;
@@ -699,7 +704,7 @@ a {
 /*.filterButton,*/
 .filterResults {
 	display: block;
-	margin: 94px auto 0;
+	margin: 74px auto 0;
 	padding: 12px 36px;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -717,7 +722,7 @@ a {
 	letter-spacing: 1px
 }
 
-.filterResults 	> span {
+#spanVisible {
 	color: #d22027;
 }
 
@@ -947,6 +952,7 @@ footer .copyright {
 	color: #313131;
 }
 
+.dateBtn.selected,
 .dateBtn:hover {
 	background: #d22027;
 	color: #ffffff;
@@ -982,7 +988,7 @@ footer .copyright {
 	border: 1px solid #dbdbdb;
 	color: #313131;
 	border-radius: 8px;
-	padding: 15px;
+	padding: 0 15px;
 }
 
 #enterDates button {
@@ -1486,7 +1492,7 @@ XL: 1200px +
 	
 	.filterResults {
 		clear: both;
-		margin: 35px 0;
+		margin: 35px auto;
 	}
 	
 	.heroSmall {
@@ -1598,11 +1604,16 @@ XL: 1200px +
 	}
 	
 	.textControls {
-		right: 30px;
+		right: 15px;
+        bottom: -50px;
 	}
 	
 	.heroSmall {
 		padding: 100px 0 50px;
+	}
+
+    .heroSmallest {
+        margin: 30px 0 0;
 	}
 	
 	.pagination a {
@@ -1710,7 +1721,7 @@ XL: 1200px +
 	
 	.filterResults {
 		clear: both;
-		margin: 90px 15px 35px -15px;
+		margin: 90px 0px 35px 0px;
 	}
 }
 
@@ -1805,15 +1816,3 @@ XL: 1200px +
 		margin: 90px auto 35px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
